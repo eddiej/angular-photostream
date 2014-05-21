@@ -1,0 +1,191 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@import "compass/reset";*/
+/* After the transition this will be the only class remaining */
+/* line 10, ../sass/screen.scss */
+.animate-show {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 1;
+  /* Default value but added for clarity */
+}
+
+/* Initial state when showing */
+/* line 20, ../sass/screen.scss */
+.animate-show.ng-hide-remove {
+  opacity: 0;
+  display: block !important;
+}
+
+/* Will transition towards this state */
+/* line 26, ../sass/screen.scss */
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+/*
+ * animations css stylesheet
+ */
+/* animate ngRepeat in phone listing */
+/* line 42, ../sass/screen.scss */
+ul.photos li.ng-enter,
+ul.photos li.ng-leave,
+ul.photos li.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+/* line 51, ../sass/screen.scss */
+ul.photos li.ng-enter,
+ul.photos li.ng-move {
+  opacity: 0;
+  /*  height: 0;*/
+  overflow: hidden;
+}
+
+/* line 58, ../sass/screen.scss */
+ul.photos li.ng-move.ng-move-active,
+ul.photos li.ng-enter.ng-enter-active {
+  opacity: 1;
+  /*  height: 120px;*/
+}
+
+/* line 64, ../sass/screen.scss */
+ul.photos li.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* line 69, ../sass/screen.scss */
+ul.photos li.ng-leave.ng-leave-active {
+  opacity: 0;
+  /*  height: 0;*/
+  /*  padding-top: 0;*/
+  /*  padding-bottom: 0;*/
+}
+
+/* cross fading between routes with ngView */
+/* line 78, ../sass/screen.scss */
+.view-container {
+  position: relative;
+}
+
+/* line 82, ../sass/screen.scss */
+.view-frame.ng-enter,
+.view-frame.ng-leave {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 91, ../sass/screen.scss */
+.view-frame.ng-enter {
+  -webkit-animation: 0.5s fade-in;
+  -moz-animation: 0.5s fade-in;
+  -o-animation: 0.5s fade-in;
+  animation: 0.5s fade-in;
+  z-index: 100;
+}
+
+/* line 99, ../sass/screen.scss */
+.view-frame.ng-leave {
+  -webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+  z-index: 99;
+}
+
+@keyframes fade-in {
+  /* line 108, ../sass/screen.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 109, ../sass/screen.scss */
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  /* line 112, ../sass/screen.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 113, ../sass/screen.scss */
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  /* line 116, ../sass/screen.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 117, ../sass/screen.scss */
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  /* line 121, ../sass/screen.scss */
+  from {
+    opacity: 1;
+  }
+
+  /* line 122, ../sass/screen.scss */
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade-out {
+  /* line 125, ../sass/screen.scss */
+  from {
+    opacity: 1;
+  }
+
+  /* line 126, ../sass/screen.scss */
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-out {
+  /* line 129, ../sass/screen.scss */
+  from {
+    opacity: 1;
+  }
+
+  /* line 130, ../sass/screen.scss */
+  to {
+    opacity: 0;
+  }
+}
+/*.photo, .detail {border:1px solid black;height:100px;}
+.photo {background:red;}
+.detail {background:green;}*/
+/* line 142, ../sass/screen.scss */
+body {
+  /*  height:102%;*/
+  /*  padding-top: 20px;*/
+}
+
+/* line 147, ../sass/screen.scss */
+ul.photos {
+  border: 1px solid transparent;
+  list-style: none;
+}
+
+/* line 152, ../sass/screen.scss */
+.view-frame {
+  border: 1px solid transparent;
+}

@@ -1,0 +1,33 @@
+
+<select ng-model="country">
+  <option value="Ireland">Ireland</option>
+  <option value="Northern Ireland">Northern Ireland</option>
+</select>
+
+
+<select ng-model="state" ng-options="s[0] as s[0] for s in states">
+  <option value="">--</option>
+</select>
+
+<span id='prev' ng-click="nextPage(-1)">Prev</span>
+|
+<span id='next' ng-click="nextPage(1)">Next</span>
+
+Page:{{page}}
+{{pagination}}
+
+
+  
+<ul class="photos">
+  <li ng-repeat="p in photos">
+    <!--<a href="#/photos/{{photo.id}}" class="thumb"><img ng-src="{{photo.imageUrl}}"></a>-->
+    
+    <a href="#/photos/{{p.photo.id}}">
+      <h2>{{p.photo.title}}</h2>
+      <img ng-src="{{p.photo.image.mini.url}}">  
+    </a>
+    <p>{{p.photo.description}}</p>
+    <p>{{p.photo.country}} > {{p.photo.state}} > {{p.photo.loc}}</p>
+    
+  </li>
+</ul>

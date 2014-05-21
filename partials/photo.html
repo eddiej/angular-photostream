@@ -1,0 +1,30 @@
+<a href='#/photos/'>Back</a>
+<ul>
+<li ng-class="{active: layout == 'photo'}" ng-click="layout = 'photo'"><a>View Photo</a></li>
+<li ng-class="{active: layout == 'detail'}" ng-click="layout = 'detail'"><a>View Detail</a></li>
+</ul>
+
+<!--<div class='animate-show {{layout}} photoview' ng-show="layout == 'photo'"><div data-ng-include data-src="'partials/photo/' + layout + '.html'"></div></div>
+<div class='animate-show {{layout}} photoview' ng-show="layout == 'detail'"><div data-ng-include data-src="'partials/photo/' + layout + '.html'"></div></div>
+-->
+
+Country:{{country}}
+State:{{state}}
+<br />
+<img ng-src="{{photo.mini.url}}"> 
+
+<br />
+
+
+<h1>{{photo.title}}</h1>
+
+<p>{{photo.description}}</p>
+
+
+
+
+<a href='#/photos/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
+<span ng-if="photo.prev == null">Previous</span>
+<a href='#/photos/{{photo.next}}' ng-if="photo.next != null">Next</a>
+<span ng-if="photo.next == null">Next</span>
+
