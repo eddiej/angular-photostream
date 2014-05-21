@@ -5,7 +5,7 @@ photoServices.factory('Photo', ['$resource',
     var country = 'Ireland';
     var state = '';
     var page = 1;
-    var Photo = $resource('http://localhost:4000/api/photos/:id', {id: "@id"}, 
+    var Photo = $resource('http://www.lokofoto.com/api/photos/:id', {id: "@id"}, 
       {
         'create':  { method: 'POST' },
         'index':   { method: 'GET', isArray: true },
