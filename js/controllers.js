@@ -23,8 +23,6 @@ photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
     $scope.getindex();
     $scope.states = Location.states({id: $scope.country});
     
-    
-    
     $scope.$watch('state', function(newValue, oldValue) {
       console.info('state change')
       if((oldValue == '' && newValue == '') || (oldValue != newValue)){
@@ -35,24 +33,15 @@ photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
     });
     
     $scope.$watch('country', function(newValue, oldValue) {
-      if(oldValue != newValue){ 
-        console.info('country change:*'+oldValue+'* -> *'+newValue+'*.')
+      if(oldValue != newValue){
         Photo.setCountry($scope.country)      
-          
         $scope.state = ''
         Photo.setState('')  
         $scope.states = Location.states({id: $scope.country});
-        
-       
         $scope.getindex();
-        // $scope.photos = Photo.index({country: $scope.country, page: $scope.page});
       }
     });
-    
-       
-       
   }
-  
 ]);
 
 photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$routeParams', 'Photo', 'Location',
@@ -63,11 +52,6 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$routeParams', 'Pho
     $scope.state = Photo.getState();
     
     
-    $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data) {
-       // $scope.mainImageUrl = data.images[0];
-     });
-    
-  
-  
+    $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data){});
   }
 ]);
