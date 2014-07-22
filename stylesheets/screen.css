@@ -31,7 +31,7 @@
  * animations css stylesheet
  */
 /* animate ngRepeat in phone listing */
-/* line 42, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 ul.photos li.ng-enter,
 ul.photos li.ng-leave,
 ul.photos li.ng-move {
@@ -41,7 +41,7 @@ ul.photos li.ng-move {
   transition: 0.5s linear all;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 ul.photos li.ng-enter,
 ul.photos li.ng-move {
   opacity: 0;
@@ -49,20 +49,20 @@ ul.photos li.ng-move {
   overflow: hidden;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 ul.photos li.ng-move.ng-move-active,
 ul.photos li.ng-enter.ng-enter-active {
   opacity: 1;
   /*  height: 120px;*/
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 ul.photos li.ng-leave {
   opacity: 1;
   overflow: hidden;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 ul.photos li.ng-leave.ng-leave-active {
   opacity: 0;
   /*  height: 0;*/
@@ -71,12 +71,12 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 /* cross fading between routes with ngView */
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .view-container {
   position: relative;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .view-frame.ng-enter,
 .view-frame.ng-leave {
   background: white;
@@ -86,7 +86,7 @@ ul.photos li.ng-leave.ng-leave-active {
   right: 0;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .view-frame.ng-enter {
   -webkit-animation: 0.5s fade-in;
   -moz-animation: 0.5s fade-in;
@@ -95,7 +95,7 @@ ul.photos li.ng-leave.ng-leave-active {
   z-index: 100;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .view-frame.ng-leave {
   -webkit-animation: 0.5s fade-out;
   -moz-animation: 0.5s fade-out;
@@ -105,67 +105,67 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 @keyframes fade-in {
-  /* line 108, ../sass/screen.scss */
+  /* line 109, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 109, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-moz-keyframes fade-in {
-  /* line 112, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 113, ../sass/screen.scss */
+  /* line 114, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
-  /* line 116, ../sass/screen.scss */
+  /* line 117, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 117, ../sass/screen.scss */
+  /* line 118, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @keyframes fade-out {
-  /* line 121, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 122, ../sass/screen.scss */
+  /* line 123, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-moz-keyframes fade-out {
-  /* line 125, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 126, ../sass/screen.scss */
+  /* line 127, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-webkit-keyframes fade-out {
-  /* line 129, ../sass/screen.scss */
+  /* line 130, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 130, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   to {
     opacity: 0;
   }
@@ -173,19 +173,19 @@ ul.photos li.ng-leave.ng-leave-active {
 /*.photo, .detail {border:1px solid black;height:100px;}
 .photo {background:red;}
 .detail {background:green;}*/
-/* line 142, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 body {
   /*  height:102%;*/
   /*  padding-top: 20px;*/
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 ul.photos {
   border: 1px solid transparent;
   list-style: none;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .view-frame {
   border: 1px solid transparent;
 }

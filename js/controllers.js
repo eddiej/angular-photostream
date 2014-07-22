@@ -1,5 +1,16 @@
 var photosControllers = angular.module('photosControllers', []);
 
+
+photosControllers.controller('PhotographersListCtrl', ['$scope', '$routeParams', 'Photographer',
+  function ($scope, $routeParams, Photographer){
+    $scope.getindex = function() {
+      $scope.photos = Photographer.index();
+    }  
+    $scope.getindex();
+  }
+]);
+
+
 photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
   function ($scope, Photo, Location){
     
