@@ -1,4 +1,4 @@
-var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices']);
+var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices']);
 
 photosApp.config(['$routeProvider',
   function($routeProvider) {
@@ -6,6 +6,10 @@ photosApp.config(['$routeProvider',
       when('/photographers', {
         templateUrl: 'partials/photographers.html',
         controller: 'PhotographersListCtrl'
+      }).
+      when('/photographers/:id', {
+        templateUrl: 'partials/photographer.html',
+        controller: 'PhotographersGalleryCtrl'
       }).
       when('/photos', {
         templateUrl: 'partials/photos.html',

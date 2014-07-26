@@ -31,13 +31,16 @@ locationServices.factory('Location', ['$resource',
 }]);
 
 var photographerServices = angular.module('photographerServices', ['ngResource']);
-locationServices.factory('Photographer', ['$resource',
+photographerServices.factory('Photographer', ['$resource',
   function($resource){
     var Photographer = $resource('http://www.lokofoto.com/api/photographers/:id', {id: "@id"}, 
       {
         'index':   { method: 'GET', isArray: true },
-        'show':    { method: 'GET', isArray: false },
+        'show':    { method: 'GET', isArray: true },
       }
     );
+    var page = 1;
+    Photographer.getPage = function(){return page;};
+    Photographer.setPage = function(p){page=p;};
     return Photographer;
   }]);
