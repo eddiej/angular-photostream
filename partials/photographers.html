@@ -1,0 +1,10 @@
+<span id='prev' ng-click="nextPage(-1)">Previous</span> | <span id='next' ng-click="nextPage(1)">Next</span>
+
+
+<ul class="photos">
+  <li ng-repeat="p in photographers">    
+    <a href="#/photographers/{{p.user.username}}">
+      <h2>{{p.user.username}}</h2> 
+    </a>
+  </li>
+</ul>

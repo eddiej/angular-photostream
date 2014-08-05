@@ -1,15 +1,50 @@
 var photosControllers = angular.module('photosControllers', []);
 
+
+photosControllers.controller('PhotographersListCtrl', ['$scope', '$routeParams', 'Photographer',
+  function ($scope, $routeParams, Photographer){
+    $scope.page = Photographer.getPage();
+    $scope.getindex = function() {
+      $scope.photographers = Photographer.index({page: $scope.page},
+    function(data, headers){$scope.pagination = headers()['x-pagination']; }
+    );
+    }  
+    $scope.getindex();
+    
+    $scope.nextPage = function(modifier) {
+      $scope.page += modifier
+      Photographer.setPage($scope.page)
+      $scope.getindex();
+    }
+  }
+]);
+
+photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$routeParams', 'Photographer',
+  function ($scope, $routeParams, Photographer){
+    $scope.page = Photographer.getPage();
+    $scope.getindex = function() {
+    $scope.photos = Photographer.show({id: $routeParams.id, page: $scope.page},
+      function(data, headers){$scope.pagination = headers()['x-pagination']; }
+    );
+    }
+    $scope.getindex();
+    $scope.nextPage = function(modifier) {
+      $scope.page += modifier
+      Photographer.setPage($scope.page)
+      $scope.getindex();
+    }
+  }
+]);
+
+
 photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
-  function ($scope, Photo, Location){
-    
-    
+  function ($scope, Photo, Location){ 
     $scope.page = Photo.getPage();
     $scope.country = Photo.getCountry();
     $scope.state = Photo.getState();
    
     $scope.getindex = function() {
-      $scope.photos = Photo.index({country: $scope.country, state: $scope.state, page: $scope.page},
+      $scope.photos = Photo.index({country: $scope.country, state:  $scope.state, page: $scope.page},
         function(data, headers){$scope.pagination = headers()['x-pagination']; }
       );
     }
