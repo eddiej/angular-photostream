@@ -105,67 +105,49 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 @keyframes fade-in {
-  /* line 102, ../sass/screen.scss */
   from {
     opacity: 0;
   }
-
-  /* line 103, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-moz-keyframes fade-in {
-  /* line 106, ../sass/screen.scss */
   from {
     opacity: 0;
   }
-
-  /* line 107, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
-  /* line 110, ../sass/screen.scss */
   from {
     opacity: 0;
   }
-
-  /* line 111, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @keyframes fade-out {
-  /* line 115, ../sass/screen.scss */
   from {
     opacity: 1;
   }
-
-  /* line 116, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-moz-keyframes fade-out {
-  /* line 119, ../sass/screen.scss */
   from {
     opacity: 1;
   }
-
-  /* line 120, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-webkit-keyframes fade-out {
-  /* line 123, ../sass/screen.scss */
   from {
     opacity: 1;
   }
-
-  /* line 124, ../sass/screen.scss */
   to {
     opacity: 0;
   }
@@ -214,7 +196,7 @@ html, body, .view-container {
 }
 /* line 154, ../sass/screen.scss */
 #view_options li {
-  border: 1px solid green;
+  border: 2px solid blue;
   display: inline-block;
   width: 30px;
 }
