@@ -31,7 +31,7 @@
  * animations css stylesheet
  */
 /* animate ngRepeat in phone listing */
-/* line 43, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 ul.photos li.ng-enter,
 ul.photos li.ng-leave,
 ul.photos li.ng-move {
@@ -41,7 +41,7 @@ ul.photos li.ng-move {
   transition: 0.5s linear all;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 ul.photos li.ng-enter,
 ul.photos li.ng-move {
   opacity: 0;
@@ -49,20 +49,20 @@ ul.photos li.ng-move {
   overflow: hidden;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 ul.photos li.ng-move.ng-move-active,
 ul.photos li.ng-enter.ng-enter-active {
   opacity: 1;
   /*  height: 120px;*/
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 ul.photos li.ng-leave {
   opacity: 1;
   overflow: hidden;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 ul.photos li.ng-leave.ng-leave-active {
   opacity: 0;
   /*  height: 0;*/
@@ -71,12 +71,12 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 /* cross fading between routes with ngView */
-/* line 79, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .view-container {
   position: relative;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .view-frame.ng-enter,
 .view-frame.ng-leave {
   background: white;
@@ -86,7 +86,7 @@ ul.photos li.ng-leave.ng-leave-active {
   right: 0;
 }
 
-/* line 92, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .view-frame.ng-enter {
   -webkit-animation: 0.5s fade-in;
   -moz-animation: 0.5s fade-in;
@@ -95,7 +95,7 @@ ul.photos li.ng-leave.ng-leave-active {
   z-index: 100;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .view-frame.ng-leave {
   -webkit-animation: 0.5s fade-out;
   -moz-animation: 0.5s fade-out;
@@ -105,67 +105,67 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 @keyframes fade-in {
-  /* line 109, ../sass/screen.scss */
+  /* line 102, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 110, ../sass/screen.scss */
+  /* line 103, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-moz-keyframes fade-in {
-  /* line 113, ../sass/screen.scss */
+  /* line 106, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 114, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
-  /* line 117, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   from {
     opacity: 0;
   }
 
-  /* line 118, ../sass/screen.scss */
+  /* line 111, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @keyframes fade-out {
-  /* line 122, ../sass/screen.scss */
+  /* line 115, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 123, ../sass/screen.scss */
+  /* line 116, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-moz-keyframes fade-out {
-  /* line 126, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 127, ../sass/screen.scss */
+  /* line 120, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-webkit-keyframes fade-out {
-  /* line 130, ../sass/screen.scss */
+  /* line 123, ../sass/screen.scss */
   from {
     opacity: 1;
   }
 
-  /* line 131, ../sass/screen.scss */
+  /* line 124, ../sass/screen.scss */
   to {
     opacity: 0;
   }
@@ -173,19 +173,52 @@ ul.photos li.ng-leave.ng-leave-active {
 /*.photo, .detail {border:1px solid black;height:100px;}
 .photo {background:red;}
 .detail {background:green;}*/
-/* line 143, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 body {
   /*  height:102%;*/
   /*  padding-top: 20px;*/
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 ul.photos {
   border: 1px solid transparent;
   list-style: none;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 143, ../sass/screen.scss */
+html, body, .view-container {
+  height: 100% !important;
+}
+
+/* line 145, ../sass/screen.scss */
 .view-frame {
   border: 1px solid transparent;
+}
+
+/* Utility Buttons */
+/* line 149, ../sass/screen.scss */
+#view_options {
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 200px;
+  border: 1px solid red;
+}
+/* line 154, ../sass/screen.scss */
+#view_options li {
+  border: 1px solid green;
+  display: inline-block;
+  width: 30px;
+}
+/* line 158, ../sass/screen.scss */
+#view_options li a {
+  display: inline-block;
 }
