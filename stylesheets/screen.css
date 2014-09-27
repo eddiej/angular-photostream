@@ -198,30 +198,30 @@ html, body, .view-container {
   border: 1px solid transparent;
 }
 
-/* line 144, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 body.photo_details {
   /* The individual photo page*/
   /* The 3 different photo views */
   /* Utility Buttons */
 }
-/* line 148, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 body.photo_details section.photo .image-container, body.photo_details section.detail .image-container, body.photo_details section.room .image-container {
   height: 100%;
 }
-/* line 150, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 body.photo_details section.photo .image-container img, body.photo_details section.detail .image-container img, body.photo_details section.room .image-container img {
   max-width: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 body.photo_details #puchase_options {
   position: absolute;
   right: 0px;
   top: 100px;
 }
-/* line 158, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 body.photo_details #view_options {
   position: absolute;
   bottom: 10px;
@@ -231,22 +231,22 @@ body.photo_details #view_options {
   width: 200px;
   border: 1px solid red;
 }
-/* line 163, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 body.photo_details #view_options li {
   display: inline-block;
 }
-/* line 165, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 body.photo_details #view_options li a {
   width: 30px;
   border: 1px solid green;
   display: inline-block;
 }
-/* line 171, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 body.photo_details #view_options li.active a {
   background: yellow;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 body.photo_details.room {
   background: #bbb;
 }

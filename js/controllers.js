@@ -22,7 +22,7 @@ photosControllers.controller('PhotographersListCtrl', ['$scope', '$rootScope', '
 
 photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$rootScope', '$routeParams', 'Photographer',
   function ($scope, $rootScope, $routeParams, Photographer){
-    $rootScope.bodyidentifier = 'photographers_galery';
+    $rootScope.bodyidentifier = 'photographers_gallery';
     $scope.page = Photographer.getPage();
     $scope.getindex = function() {
     $scope.photos = Photographer.show({id: $routeParams.id, page: $scope.page},
