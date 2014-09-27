@@ -228,13 +228,13 @@ section.photo img, section.detail img, section.room img {
 #view_options li {
   display: inline-block;
 }
-/* line 163, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #view_options li a {
   width: 30px;
   border: 1px solid green;
   display: inline-block;
 }
-/* line 169, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 #view_options li.active a {
   background: yellow;
 }
