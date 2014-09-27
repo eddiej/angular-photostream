@@ -100,6 +100,11 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$rout
   }
 ]);
 
+photosControllers.run(function($rootScope, $templateCache) {
+  $rootScope.$on('$viewContentLoaded', function() {
+    $templateCache.removeAll();
+  });
+});
 
 // photosControllers.factory('UserService', function() {
 //   var cls='start'
