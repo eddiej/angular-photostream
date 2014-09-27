@@ -1,14 +1,28 @@
+<div class="main-container">
 
-<span id='prev' ng-click="nextPage(-1)">Previous</span> | <span id='next' ng-click="nextPage(1)">Next</span>
-
-
-<ul class="photos">
-  <li ng-repeat="p in photos">    
-    <a href="#/photos/{{p.photo.id}}">
-      <h2>{{p.photo.title}}</h2>
-      <img ng-src="{{p.photo.image.display.url}}">  
-    </a>
-    <p>{{p.photo.description}}</p>
+    <div class="header">
+        <div class="home-box">
+        &nbsp;
+        </div><!--end home-box-->
+        <div class="name-box">
+        <a class="var uppercase-space">Daniel bradley</a>
+        </div><!--end name-box-->
+        <div class="settings-box">
+          &nbsp;
+        </div><!--end settings-box-->
+        <div class="clearfix"></div>
+    </div>
     
-  </li>
-</ul>
+    <ul class="photo-grid">
+      <li ng-repeat="p in photos"> 
+      <div class="grid-con">
+        <a href="#/photos/{{p.photo.id}}" class="project cc" style="background-image:url({{p.photo.image.display.url}});">
+          <!--<h2>{{p.photo.title}}</h2>-->
+        </a>
+       <!-- <p>{{p.photo.description}}</p>-->
+      </div>   
+      
+    </li>
+  </ul>
+
+</div>
