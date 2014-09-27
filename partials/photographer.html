@@ -6,7 +6,7 @@
   <li ng-repeat="p in photos">    
     <a href="#/photos/{{p.photo.id}}">
       <h2>{{p.photo.title}}</h2>
-      <img ng-src="{{p.photo.image.mini.url}}">  
+      <img ng-src="{{p.photo.image.display.url}}">  
     </a>
     <p>{{p.photo.description}}</p>
     
