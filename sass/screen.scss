@@ -142,7 +142,7 @@ ul.photos{
 html, body, .view-container {padding:0;margin:0;height:100%;border:1px solid red;}
 .view-frame {border:1px solid transparent;}
 
-body.photo_details { /* The individual photo page*/
+html.photo_details { /* The individual photo page*/
   /* The 3 different photo views */
   section.photo, section.detail, section.room{
     
@@ -174,10 +174,11 @@ body.photo_details { /* The individual photo page*/
     }
   }
 }
-body.photo_details.room{
+html.photo_details.room{
   background:#bbb;
 }
 
-body.photographers_gallery{
-  
+html.photographers_gallery{
+ height:auto;border:none;
+ body, .view-container{height:auto;border:none;} 
 }
