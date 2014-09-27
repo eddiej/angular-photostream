@@ -1,8 +1,9 @@
 var photosControllers = angular.module('photosControllers', []);
 
 
-photosControllers.controller('PhotographersListCtrl', ['$scope', '$routeParams', 'Photographer',
-  function ($scope, $routeParams, Photographer){
+photosControllers.controller('PhotographersListCtrl', ['$scope', '$rootScope', '$routeParams', 'Photographer',
+  function ($scope, $rootScope, $routeParams, Photographer){
+    $rootScope.bodyidentifier = 'photographers_list';
     $scope.page = Photographer.getPage();
     $scope.getindex = function() {
       $scope.photographers = Photographer.index({page: $scope.page},
@@ -19,8 +20,9 @@ photosControllers.controller('PhotographersListCtrl', ['$scope', '$routeParams',
   }
 ]);
 
-photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$routeParams', 'Photographer',
-  function ($scope, $routeParams, Photographer){
+photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$rootScope', '$routeParams', 'Photographer',
+  function ($scope, $rootScope, $routeParams, Photographer){
+    $rootScope.bodyidentifier = 'photographers_galery';
     $scope.page = Photographer.getPage();
     $scope.getindex = function() {
     $scope.photos = Photographer.show({id: $routeParams.id, page: $scope.page},
@@ -37,8 +39,11 @@ photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$routeParam
 ]);
 
 
-photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
-  function ($scope, Photo, Location){ 
+photosControllers.controller('PhotoListCtrl', ['$scope', '$rootScope', 'Photo', 'Location',
+  function ($scope, $rootScope, Photo, Location){  
+    $rootScope.bodyidentifier = 'photo_list';
+    
+     
     $scope.page = Photo.getPage();
     $scope.country = Photo.getCountry();
     $scope.state = Photo.getState();
@@ -79,14 +84,34 @@ photosControllers.controller('PhotoListCtrl', ['$scope', 'Photo', 'Location',
   }
 ]);
 
-photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$routeParams', 'Photo', 'Location',
-  function ($scope, $routeParams, Photo, Location){
+photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location',
+  function ($scope, $rootScope, $routeParams, Photo, Location){
     $scope.layout = 'photo';
+    
+    $scope.$watch('layout', function(){
+      $rootScope.bodyidentifier = 'photo_details '+ $scope.layout;
+    });
+    
     
     $scope.country = Photo.getCountry();
     $scope.state = Photo.getState();
     
-    
     $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data){});
   }
 ]);
+
+
+// photosControllers.factory('UserService', function() {
+//   var cls='start'
+//   return {
+//     get: function(){
+//       return cls;
+//     },
+//     set: function(value){
+//       cls=value;
+//     }
+//   };
+// });
+// photosControllers.run(function($rootScope) {
+    // $rootScope.bodyidentifier = 'index';
+// })

@@ -189,33 +189,37 @@ ul.photos {
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
-/* line 143, ../sass/screen.scss */
-html, body, .view-container {
-  height: 100% !important;
-}
-
-/* line 145, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .view-frame {
   border: 1px solid transparent;
 }
 
-/* line 147, ../sass/screen.scss */
-section#photo {
-  border: 2px solid green;
+/* line 146, ../sass/screen.scss */
+body.photo_details {
+  /* The individual photo page*/
+  /* The 3 different photo views */
+  /* Utility Buttons */
 }
-
-/* Photo view partials */
-/* line 151, ../sass/screen.scss */
-section.photo img, section.detail img, section.room img {
-  max-width: 50%;
-  height: auto;
+/* line 148, ../sass/screen.scss */
+body.photo_details section.photo, body.photo_details section.detail, body.photo_details section.room {
+  height: 30%;
+  border: 10px solid orange;
 }
-
-/* Utility Buttons */
-/* line 154, ../sass/screen.scss */
-#view_options {
+/* line 150, ../sass/screen.scss */
+body.photo_details section.photo .image-container, body.photo_details section.detail .image-container, body.photo_details section.room .image-container {
+  height: 100%;
+  border: 10px solid blue;
+}
+/* line 152, ../sass/screen.scss */
+body.photo_details section.photo .image-container img, body.photo_details section.detail .image-container img, body.photo_details section.room .image-container img {
+  max-height: 100%;
+  width: auto;
+}
+/* line 157, ../sass/screen.scss */
+body.photo_details #view_options {
   position: absolute;
   bottom: 10px;
   margin: 0 auto;
@@ -224,17 +228,22 @@ section.photo img, section.detail img, section.room img {
   width: 200px;
   border: 1px solid red;
 }
-/* line 159, ../sass/screen.scss */
-#view_options li {
+/* line 162, ../sass/screen.scss */
+body.photo_details #view_options li {
   display: inline-block;
 }
-/* line 161, ../sass/screen.scss */
-#view_options li a {
+/* line 164, ../sass/screen.scss */
+body.photo_details #view_options li a {
   width: 30px;
   border: 1px solid green;
   display: inline-block;
 }
-/* line 167, ../sass/screen.scss */
-#view_options li.active a {
+/* line 170, ../sass/screen.scss */
+body.photo_details #view_options li.active a {
   background: yellow;
+}
+
+/* line 175, ../sass/screen.scss */
+body.photo_details.room {
+  background: #777;
 }
