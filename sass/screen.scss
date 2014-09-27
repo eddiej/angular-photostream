@@ -139,14 +139,14 @@ ul.photos{
   list-style:none;
 }
 
-html, body {padding:0;margin:0;height:100%;}
+html, body, .view-container {padding:0;margin:0;height:100%;border:1px solid red;}
 .view-frame {border:1px solid transparent;}
 body.photo_details { /* The individual photo page*/
   /* The 3 different photo views */
   section.photo, section.detail, section.room{
-    height:30%;border:1px solid orange;
+    
     .image-container {
-      height:100%;border:1px solid blue;text-align:middle;
+      height:100%;
       img{max-width:50%;height:auto;display:block;margin:0 auto;}
     }
   } 

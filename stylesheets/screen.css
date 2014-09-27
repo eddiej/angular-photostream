@@ -186,10 +186,11 @@ ul.photos {
 }
 
 /* line 142, ../sass/screen.scss */
-html, body {
+html, body, .view-container {
   padding: 0;
   margin: 0;
   height: 100%;
+  border: 1px solid red;
 }
 
 /* line 143, ../sass/screen.scss */
@@ -203,16 +204,9 @@ body.photo_details {
   /* The 3 different photo views */
   /* Utility Buttons */
 }
-/* line 146, ../sass/screen.scss */
-body.photo_details section.photo, body.photo_details section.detail, body.photo_details section.room {
-  height: 30%;
-  border: 1px solid orange;
-}
 /* line 148, ../sass/screen.scss */
 body.photo_details section.photo .image-container, body.photo_details section.detail .image-container, body.photo_details section.room .image-container {
   height: 100%;
-  border: 1px solid blue;
-  text-align: middle;
 }
 /* line 150, ../sass/screen.scss */
 body.photo_details section.photo .image-container img, body.photo_details section.detail .image-container img, body.photo_details section.room .image-container img {
