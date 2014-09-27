@@ -201,8 +201,20 @@ html, body, .view-container {
   border: 1px solid transparent;
 }
 
+/* line 147, ../sass/screen.scss */
+section#photo {
+  border: 2px solid green;
+}
+
+/* Photo view partials */
+/* line 151, ../sass/screen.scss */
+section.photo img, section.detail img, section.room img {
+  max-width: 50%;
+  height: auto;
+}
+
 /* Utility Buttons */
-/* line 149, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 #view_options {
   position: absolute;
   bottom: 10px;
@@ -212,13 +224,17 @@ html, body, .view-container {
   width: 200px;
   border: 1px solid red;
 }
-/* line 154, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #view_options li {
+  display: inline-block;
+}
+/* line 163, ../sass/screen.scss */
+#view_options li a {
+  width: 30px;
   border: 1px solid green;
   display: inline-block;
-  width: 30px;
 }
-/* line 158, ../sass/screen.scss */
-#view_options li a {
-  display: inline-block;
+/* line 169, ../sass/screen.scss */
+#view_options li.active a {
+  background: yellow;
 }

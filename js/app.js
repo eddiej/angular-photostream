@@ -1,5 +1,11 @@
 var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices']);
 
+photosApp.run(function($rootScope, $templateCache) {
+   $rootScope.$on('$viewContentLoaded', function() {
+      $templateCache.removeAll();
+   });
+});
+
 photosApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.

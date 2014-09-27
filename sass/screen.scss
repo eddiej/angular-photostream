@@ -144,7 +144,12 @@ html, body, .view-container {height:100% !important;}
 
 .view-frame {border:1px solid transparent;}
 
+section#photo {border:2px solid green;}
 
+/* Photo view partials */
+section.photo, section.detail, section.room{
+  img{max-width:50%;height:auto;}
+}
 /* Utility Buttons */
 #view_options{
   position:absolute;bottom:10px;
@@ -152,11 +157,16 @@ html, body, .view-container {height:100% !important;}
   width:200px;
   border:1px solid red;
   li {
-    border:1px solid green;
+    
     display:inline-block;
-    width:30px;
+    
     a {
+      width:30px;
+      border:1px solid green;
       display:inline-block;
     }
+  }
+  li.active a {
+    background:yellow;
   }
 }
