@@ -86,7 +86,7 @@ photosControllers.controller('PhotoListCtrl', ['$scope', '$rootScope', 'Photo', 
 
 photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location',
   function ($scope, $rootScope, $routeParams, Photo, Location){
-    $scope.layout = 'photo';
+    $scope.layout = 'room';
     
     $scope.$watch('layout', function(){
       $rootScope.bodyidentifier = 'photo_details '+ $scope.layout;

@@ -140,17 +140,19 @@ ul.photos{
 }
 
 html, body {padding:0;margin:0;height:100%;}
-
 .view-frame {border:1px solid transparent;}
-
 body.photo_details { /* The individual photo page*/
   /* The 3 different photo views */
   section.photo, section.detail, section.room{
-    height:30%;border:10px solid orange;
+    height:30%;border:1px solid orange;
     .image-container {
-      height:100%;border:10px solid blue;
-      img{max-height:100%;width:auto;}
+      height:100%;border:1px solid blue;text-align:middle;
+      img{max-width:50%;height:auto;display:block;margin:0 auto;}
     }
+  }
+  
+  #puchase_options {
+    position:absolute;right:0px;top:100px;
   }
   
   /* Utility Buttons */
@@ -173,7 +175,5 @@ body.photo_details { /* The individual photo page*/
   }
 }
 body.photo_details.room{
-  background:#777;
+  background:#bbb;
 }
-
-
