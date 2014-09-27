@@ -206,22 +206,21 @@ html.photo_details {
 }
 /* line 149, ../sass/screen.scss */
 html.photo_details section.photo .image-container, html.photo_details section.detail .image-container, html.photo_details section.room .image-container {
-  height: 100%;
+  /*      height:100%;*/
+  /*      img{max-width:50%;height:auto;display:block;margin:0 auto;}*/
 }
-/* line 151, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 html.photo_details section.photo .image-container img, html.photo_details section.detail .image-container img, html.photo_details section.room .image-container img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  max-height: 50%;
+  width: auto;
 }
-/* line 154, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 html.photo_details #puchase_options {
   position: absolute;
   right: 0px;
   top: 100px;
 }
-/* line 159, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 html.photo_details #view_options {
   position: absolute;
   bottom: 10px;
@@ -231,32 +230,43 @@ html.photo_details #view_options {
   width: 200px;
   border: 1px solid red;
 }
-/* line 164, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 html.photo_details #view_options li {
   display: inline-block;
 }
-/* line 166, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 html.photo_details #view_options li a {
   width: 30px;
   border: 1px solid green;
   display: inline-block;
 }
-/* line 172, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 html.photo_details #view_options li.active a {
   background: yellow;
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 html.photo_details.room {
   background: #bbb;
 }
+/* line 180, ../sass/screen.scss */
+html.photo_details.room #theroom {
+  position: fixed;
+  text-align: center;
+  width: 6578px;
+  margin-left: -3289px;
+  padding-bottom: 589px;
+  top: 50%;
+  left: 50%;
+  background: url(../images/crosshairs.png);
+}
 
-/* line 181, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 html.photographers_gallery {
   height: auto;
   border: none;
 }
-/* line 183, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 html.photographers_gallery body, html.photographers_gallery .view-container {
   height: auto;
   border: none;

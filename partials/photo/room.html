@@ -1,6 +1,14 @@
-<div class='image-container'>
-  <img ng-src="{{photo.display.url}}"> 
+<div id='theroom' data-height='{{(1.1 * 100)}}' 
+  data-topheightminuspadding='{{(1.1 * 100) + 150}}'
+  data-topheight='{{(1.1 * 100) + 150 + 250}}'
+  style='padding-top:150px;height:{{(1.1 * 100) + 150 + 250}}px;margin-top:-{{((1.1 * 100) + 150 + 250 + 589)/2}}px'>
+
+  
+  <div class='image-container'>
+    <img ng-src="{{photo.display.url}}"> 
+  </div>
 </div>
+
 
 
 <div id='puchase_options'>

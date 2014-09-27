@@ -147,8 +147,9 @@ html.photo_details { /* The individual photo page*/
   section.photo, section.detail, section.room{
     
     .image-container {
-      height:100%;
-      img{max-width:50%;height:auto;display:block;margin:0 auto;}
+/*      height:100%;*/
+/*      img{max-width:50%;height:auto;display:block;margin:0 auto;}*/
+    img {max-height:50%;width:auto;}
     }
   } 
   #puchase_options {
@@ -176,6 +177,17 @@ html.photo_details { /* The individual photo page*/
 }
 html.photo_details.room{
   background:#bbb;
+  #theroom{
+   
+    position:fixed;
+  	text-align:center;
+    width:6578px;
+  	margin-left:-3289px;
+  	padding-bottom:589px;
+  	top:50%;
+  	left:50%;
+    background:url(../images/crosshairs.png)  ;
+	}
 }
 
 html.photographers_gallery{

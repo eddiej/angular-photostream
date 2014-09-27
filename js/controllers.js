@@ -96,13 +96,18 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$rout
     $scope.country = Photo.getCountry();
     $scope.state = Photo.getState();
     
-    $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data){});
+    $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data){
+      reposition();
+    });
+    
+    
   }
 ]);
 
 photosControllers.run(function($rootScope, $templateCache) {
   $rootScope.$on('$viewContentLoaded', function() {
     $templateCache.removeAll();
+    
   });
 });
 
