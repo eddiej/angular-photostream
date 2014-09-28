@@ -38,10 +38,10 @@
 
 
   <nav>
-    <a href='#/photos/'>Index</a>
-    <a href='#/photos/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
+    <a href='#/photographers/{{username}}'>Index</a>
+    <a href='#/photographers/{{username}}/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
     <span ng-if="photo.prev == null">Previous</span>
-    <a href='#/photos/{{photo.next}}' ng-if="photo.next != null">Next</a>
+    <a href='#/photographers/{{username}}/{{photo.next}}' ng-if="photo.next != null">Next</a>
     <span ng-if="photo.next == null">Next</span>
   </nav>
 
