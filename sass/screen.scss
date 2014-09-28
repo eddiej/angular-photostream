@@ -157,23 +157,21 @@ html.photo_details { /* The individual photo page*/
   /* Utility Buttons */
   nav {z-index:100;position:absolute;top:200px;}
   #view_options{z-index:100;
-    position:absolute;bottom:10px;
+    position:absolute;bottom:20px;
     margin:0 auto;left:0;right:0;
-    width:200px;
-    border:1px solid red;
+    width:253px;
+    padding:0;
     li {
-      display:inline-block;
-      a {
-        width:30px;
-        border:1px solid green;
-        display:inline-block;
+      display:inline-block; 
+      a { 
+      background: #f2f2f2; width: 60px; height: 60px; display: block;line-height: 60px;float: left;padding: 0; margin: 0 ;font-size: 14px;text-align:center; 
       }
     }
     li.active a {
-      background:yellow;
+      background: #333333; color: #fff;
     }
   }
-  .overlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:10;background:rgba(255,255,255,0.5);
+  .overlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:10;background:rgba(255,255,255,0.97);
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
@@ -242,63 +240,14 @@ html.photo_details.room{
   
   @font-face {
   	font-family: 'AGaramondPro-Italic';
-  	src: url('type/AGaramondPro-Italic.eot?') format('eot'), 
-  	     url('type/AGaramondPro-Italic.otf')  format('opentype'),
-  	     url('type/AGaramondPro-Italic.woff') format('woff'), 
-  	     url('type/AGaramondPro-Italic.ttf')  format('truetype'),
-  	     url('type/AGaramondPro-Italic.svg#AGaramondPro-Italic') format('svg');
+  	src: url('../sass/type/AGaramondPro-Italic.eot?') format('eot'), 
+  	     url('../sass/type/AGaramondPro-Italic.otf')  format('opentype'),
+  	     url('../sass/type/AGaramondPro-Italic.woff') format('woff'), 
+  	     url('../sass/type/AGaramondPro-Italic.ttf')  format('truetype'),
+  	     url('../sass/type/AGaramondPro-Italic.svg#AGaramondPro-Italic') format('svg');
   }
   
-  @font-face {
-      font-family: 'brandon_grotesquemedium';
-      src: url('type/brandon_med-webfont.eot');
-      src: url('type/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
-           url('type/brandon_med-webfont.woff') format('woff'),
-           url('type/brandon_med-webfont.ttf') format('truetype'),
-           url('type/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  
-  @font-face {
-      font-family: 'brandon_grotesquelight';
-      src: url('type/brandon_light-webfont.eot');
-      src: url('type/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
-           url('type/brandon_light-webfont.woff') format('woff'),
-           url('type/brandon_light-webfont.ttf') format('truetype'),
-           url('type/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  
-  @font-face {
-      font-family: 'brandon_grotesqueRgIt';
-      src: url('type/brandon_reg_it-webfont.eot');
-      src: url('type/brandon_reg_it-webfont.eot?#iefix') format('embedded-opentype'),
-           url('type/brandon_reg_it-webfont.woff') format('woff'),
-           url('type/brandon_reg_it-webfont.ttf') format('truetype'),
-           url('type/brandon_reg_it-webfont.svg#brandon_grotesqueRgIt') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  
-  
-  
-  
-  @font-face {
-      font-family: 'brandon_grotesque_regularRg';
-      src: url('type/brandon_reg-webfont.eot');
-      src: url('type/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
-           url('type/brandon_reg-webfont.woff') format('woff'),
-           url('type/brandon_reg-webfont.ttf') format('truetype'),
-           url('type/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
+
 
 
 /* ==================================================================================================================================================== */
@@ -354,12 +303,11 @@ a:hover {
 html.photo_details {
 
   /* ==================================================================================================================================================== */
-  /* END HTML.PHOTO_DETAILS */
+  /* HTML.PHOTO_DETAILS */
   /* ==================================================================================================================================================== */
   
   
   
-  .header { height: 80px; background:red;}
 
   /* ==================================================================================================================================================== */
   /* MAIN CONTENT */
@@ -369,11 +317,11 @@ html.photo_details {
   
  
    .main-container { height:100%; }
-  .header { height: 80px; }
+  .header { height: 80px; position:relative; z-index: 101;}
   .main-content { height: 90%;}
   .grid-cont { height: 90%;}
   .home-box { width: 15%; float: left;height: 100%; text-align: center; display:block;}
-  .home-box a { line-height: 80px;}
+  .home-box a { line-height: 80px; z-index: 15;}
   .name-box { width: 70%; float: left;height: 100%;text-align: center;padding-top: 25px;}
   .name-box a:hover { cursor:pointer;}
   .settings-box { width: 15%; float: left;height: 100%; text-align: center; padding-top: 20px; }
@@ -390,6 +338,39 @@ html.photo_details {
   .project:hover { opacity: 0.89;}
   ul.photo-grid { list-style-type: none; margin:0; padding:0;} 
   
+  nav {margin: 0 auto; position: absolute; top: 42%;width: 100%; z-index: 9; 
+    
+    a.prev { background-image: url("../images/right-arrow-small.png");
+    display: block;
+    height: 31px;
+    opacity: 0.5;
+    left: 40px;
+    width: 38px;}
+    
+    a.next {background-image: url("../images/right-arrow-small.png");
+    display: block;
+    height: 31px;
+    opacity: 0.5;
+    right: 40px;
+    width: 38px;}
+  
+  }
+  
+  
+  /* ==================================================================================================================================================== */
+  /* PROFILE */
+  /* ==================================================================================================================================================== */
+  
+  .large-text { font-size: 2em;}
+  
+  /* ==================================================================================================================================================== */
+  /* INFO */
+  /* ==================================================================================================================================================== */
+  
+  
+    .m_info-title { font-family:Proxima Nova, Open Sans, Helvetica Neue, sans-serif;text-transform: uppercase;letter-spacing: 0.3em; font-size: 30px;line-height: 1.4em; color: #333333;padding-top: 0px !important;}
+    .m_info-desc {font-size: 18px; color: gray;padding-top: 30px !important; }
+
   
   
   /* ==================================================================================================================================================== */

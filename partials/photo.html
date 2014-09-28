@@ -2,7 +2,7 @@
 
     <div class="header">
         <div class="home-box">
-        &nbsp;
+          <a href='#/photos/'> <i class="fa fa-th"></i></a>
         </div><!--end home-box-->
         <div class="name-box">
         <a class="var uppercase-space">{{photo.photographer}}</a>
@@ -34,17 +34,16 @@
 
 
   <nav>
-    <a href='#/photos/'>Index</a>
-    <a href='#/photos/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
+    <a href='#/photos/{{photo.prev}}' ng-if="photo.prev != null" class="prev">Previous</a>
     <span ng-if="photo.prev == null">Previous</span>
-    <a href='#/photos/{{photo.next}}' ng-if="photo.next != null">Next</a>
+    <a href='#/photos/{{photo.next}}' ng-if="photo.next != null" class="next">Next</a>
     <span ng-if="photo.next == null">Next</span>
   </nav>
 
   <ul id='view_options'>
-    <li ng-class="{active: layout == 'photo'}" ng-click="layout = 'photo'"><a>Show</a></li>
-    <li ng-class="{active: layout == 'room'}" ng-click="layout = 'room'"><a>Room</a></li>
-    <li ng-class="{active: overlay == 'detail'}" ng-click="overlay = (overlay == 'detail' ? '' : 'detail')"><a>Info</a></li>
-    <li ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')"><a>Profile</a></li>
+    <li ng-class="{active: layout == 'photo'}" ng-click="layout = 'photo'"><a><i class="fa fa-expand"></i></a></li>
+    <li ng-class="{active: layout == 'room'}" ng-click="layout = 'room'"><a><i class="fa fa-tags"></i></a></li>
+    <li ng-class="{active: overlay == 'detail'}" ng-click="overlay = (overlay == 'detail' ? '' : 'detail')"><a><i class="fa fa-bars"></i></a></li>
+    <li ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')"><a><i class="fa fa-user"></i></a></li>
   </ul>
 </section>
