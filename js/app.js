@@ -25,6 +25,10 @@ photosApp.config(['$routeProvider',
         templateUrl: 'partials/photo.html',
         controller: 'PhotoDetailsCtrl'
       }).
+      when('/photographers/:username/:photoId', {
+        templateUrl: 'partials/photo.html',
+        controller: 'PhotogPhotoDetailsCtrl'
+      }).
       otherwise({
         redirectTo: '/photos'
       });

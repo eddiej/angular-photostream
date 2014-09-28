@@ -5,7 +5,7 @@
         &nbsp;
         </div><!--end home-box-->
         <div class="name-box">
-        <a class="var uppercase-space">Daniel bradley</a>
+        <a class="var uppercase-space">{{photographer}}</a>
         </div><!--end name-box-->
         <div class="settings-box">
           &nbsp;
@@ -16,7 +16,7 @@
     <ul class="photo-grid">
       <li ng-repeat="p in photos"> 
       <div class="grid-con">
-        <a href="#/photos/{{p.photo.id}}" class="project cc" style="background-image:url({{p.photo.image.display.url}});">
+        <a href="#/photographers/{{username}}/{{p.photo.id}}" class="project cc" style="background-image:url({{p.photo.image.display.url}});">
           <!--<h2>{{p.photo.title}}</h2>-->
         </a>
        <!-- <p>{{p.photo.description}}</p>-->

@@ -24,10 +24,12 @@ photosControllers.controller('PhotographersGalleryCtrl', ['$scope', '$rootScope'
   function ($scope, $rootScope, $routeParams, Photographer){
     $rootScope.bodyidentifier = 'photographers_gallery';
     $scope.page = Photographer.getPage();
+    $scope.username = $routeParams.id;
     $scope.getindex = function() {
-    $scope.photos = Photographer.show({id: $routeParams.id, page: $scope.page},
-      function(data, headers){$scope.pagination = headers()['x-pagination']; }
-    );
+      $scope.photos = Photographer.show({id: $routeParams.id, page: $scope.page},
+        function(data, headers){$scope.pagination = headers()['x-pagination']; $scope.photographer = data[0].photo['first_name'] +' '+ data[0].photo['last_name']  }
+      );
+      
     }
     $scope.getindex();
     $scope.nextPage = function(modifier) {
@@ -97,6 +99,23 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$rout
     $scope.state = Photo.getState();
     
     $scope.photo = Photo.get({id: $routeParams.photoId, country: $scope.country, state: $scope.state}, function(data){
+      reposition();
+    });
+    
+    
+  }
+]);
+
+photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location',
+  function ($scope, $rootScope, $routeParams, Photo, Location){
+    $scope.layout = 'room';
+    $scope.username = $routeParams.username;
+    
+    $scope.$watch('layout', function(){
+      $rootScope.bodyidentifier = 'photo_details '+ $scope.layout;
+    });
+    
+    $scope.photo = Photo.get({id: $routeParams.photoId, username: $routeParams.username}, function(data){
       reposition();
     });
     
