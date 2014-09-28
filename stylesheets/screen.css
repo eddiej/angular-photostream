@@ -105,49 +105,67 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 @keyframes fade-in {
+  /* line 102, ../sass/screen.scss */
   from {
     opacity: 0;
   }
+
+  /* line 103, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-moz-keyframes fade-in {
+  /* line 106, ../sass/screen.scss */
   from {
     opacity: 0;
   }
+
+  /* line 107, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
+  /* line 110, ../sass/screen.scss */
   from {
     opacity: 0;
   }
+
+  /* line 111, ../sass/screen.scss */
   to {
     opacity: 1;
   }
 }
 @keyframes fade-out {
+  /* line 115, ../sass/screen.scss */
   from {
     opacity: 1;
   }
+
+  /* line 116, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-moz-keyframes fade-out {
+  /* line 119, ../sass/screen.scss */
   from {
     opacity: 1;
   }
+
+  /* line 120, ../sass/screen.scss */
   to {
     opacity: 0;
   }
 }
 @-webkit-keyframes fade-out {
+  /* line 123, ../sass/screen.scss */
   from {
     opacity: 1;
   }
+
+  /* line 124, ../sass/screen.scss */
   to {
     opacity: 0;
   }
@@ -195,13 +213,11 @@ html.photo_details section.photo .image-container, html.photo_details section.de
 /* line 158, ../sass/screen.scss */
 html.photo_details nav {
   z-index: 100;
-  position: absolute;
-  top: 200px;
 }
 /* line 159, ../sass/screen.scss */
 html.photo_details #view_options {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   margin: 0 auto;
   left: 0;
@@ -249,7 +265,7 @@ html.photo_details #view_options li.active a {
   color: #fff;
 }
 /* line 177, ../sass/screen.scss */
-html.photo_details .overlay {
+html.photo_details .overlay, html.photo_details .scrollableoverlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -270,9 +286,8 @@ html.photo_details .overlay {
   transition: all .2s ease-in-out;
 }
 /* line 190, ../sass/screen.scss */
-html.photo_details .overlay .flexbox {
-  width: 50%;
-  margin: 0 auto;
+html.photo_details .overlay .flexbox, html.photo_details .scrollableoverlay .flexbox {
+  margin: 0 200px;
   text-align: center;
 }
 /* line 194, ../sass/screen.scss */
@@ -302,7 +317,7 @@ html.photo_details.room {
 }
 /* line 212, ../sass/screen.scss */
 html.photo_details.room #theroom {
-  background: url(../images/crosshairs.png);
+  background: url(../images/crosshairs.png) center center;
 }
 /* line 215, ../sass/screen.scss */
 html.photo_details.room #puchase_flex {
@@ -644,7 +659,7 @@ html.photo_details ul.photo-grid {
 /* line 381, ../sass/screen.scss */
 html.photo_details nav {
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   top: 42%;
   width: 100%;
   z-index: 9;
@@ -952,6 +967,7 @@ html.photographers_gallery {
 }
 /* line 437, ../sass/screen.scss */
 html.photographers_gallery body, html.photographers_gallery .view-container {
+  min-height: 100%;
   height: auto;
   border: none;
 }
@@ -1526,7 +1542,7 @@ html.photographers_gallery .modal-spinner {
   left: 50%;
   margin-right: -32px;
   margin-top: -32px;
-  background: url(spinner.gif) #111 no-repeat center center;
+  background: url(spinner.gif) #111111 no-repeat center center;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -o-border-radius: 8px;
@@ -1749,7 +1765,7 @@ html.photographers_gallery .select-style {
   overflow: hidden;
   background-color: #fff;
   margin: 0 auto;
-  background: #fff url(images/arrowdown.gif) no-repeat 90% 50%;
+  background: white url(images/arrowdown.gif) no-repeat 90% 50%;
 }
 /* line 1132, ../sass/screen.scss */
 html.photographers_gallery .select-style select {

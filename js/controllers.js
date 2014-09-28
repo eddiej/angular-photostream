@@ -108,7 +108,7 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$rout
 
 photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location',
   function ($scope, $rootScope, $routeParams, Photo, Location){
-    $scope.layout = 'room';
+    $scope.layout = 'photo';
     $scope.username = $routeParams.username;
     
     $scope.$watch('layout', function(){
