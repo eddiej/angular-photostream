@@ -2,7 +2,7 @@
 
     <div class="header">
         <div class="home-box">
-          <a href='#/photos/'> <i class="fa fa-th"></i></a>
+          <a href='#/photographers/{{username}}'> <i class="fa fa-th"></i></a>
         </div><!--end home-box-->
         <div class="name-box">
         <a class="var uppercase-space" ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')" >{{photo.photographer}}{{$window.Stripe}}</a>
@@ -38,7 +38,6 @@
 
 
   <nav>
-    <a href='#/photographers/{{username}}'>Index</a>
     <a href='#/photographers/{{username}}/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
     <span ng-if="photo.prev == null">Previous</span>
     <a href='#/photographers/{{username}}/{{photo.next}}' ng-if="photo.next != null">Next</a>
