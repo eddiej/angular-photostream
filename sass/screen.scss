@@ -173,7 +173,7 @@ html.photo_details { /* The individual photo page*/
       background:yellow;
     }
   }
-  .overlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:10;background:rgba(255,255,255,0.5);
+  .overlay, .scrollableoverlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:10;background:rgba(255,255,255,0.5);
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
@@ -182,7 +182,12 @@ html.photo_details { /* The individual photo page*/
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
+    .flexbox {
+      width:50%;margin:0 auto;text-align:center;
+    }
   }
+  .scrollableoverlay{position:absolute;top:0;left:0;height:auto;min-height:100%;}
+  
 }
 
 html.photo_details{
@@ -203,7 +208,7 @@ html.photo_details.room{
     background:url(../images/crosshairs.png)  ;
 	}
 	#puchase_flex{
-	  position:absolute;right:0px;height:100%;top:0px;
+	  position:fixed;right:0px;height:100%;top:0px;
 	  z-index:9;
 	  display: -webkit-flex;
     display: flex;

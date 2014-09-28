@@ -5,7 +5,7 @@
         &nbsp;
         </div><!--end home-box-->
         <div class="name-box">
-        <a class="var uppercase-space">{{photo.photographer}}</a>
+        <a class="var uppercase-space">{{photo.photographer}}{{$window.Stripe}}</a>
         </div><!--end name-box-->
         <div class="settings-box">
           &nbsp;
@@ -27,6 +27,10 @@
     <div data-ng-include data-src="'partials/photo/profile.html'">
     </div>
   </section>
+  <section class='animate-shows {{layout}} photoview scrollableoverlay' ng-show="overlay == 'purchase'">
+    <div data-ng-include data-src="'partials/photo/purchase.html'">
+    </div>
+  </section>
   <section class='animate-show {{layout}} photoview' ng-show="layout == 'room'">
     <div data-ng-include data-src="'partials/photo/room.html'">
     </div>
@@ -46,5 +50,6 @@
     <li ng-class="{active: layout == 'room'}" ng-click="layout = 'room'"><a>Room</a></li>
     <li ng-class="{active: overlay == 'detail'}" ng-click="overlay = (overlay == 'detail' ? '' : 'detail')"><a>Info</a></li>
     <li ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')"><a>Profile</a></li>
+    <li ng-class="{active: overlay == 'purchase'}" ng-click="overlay = (overlay == 'purchase' ? '' : 'purchase')"><a>Purchase</a></li>
   </ul>
 </section>

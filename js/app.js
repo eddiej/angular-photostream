@@ -29,3 +29,6 @@ photosApp.config(['$routeProvider',
         redirectTo: '/photos'
       });
   }]);
+  
+ 
+
