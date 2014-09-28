@@ -1,7 +1,19 @@
 <section id='photo'>
-  <header>
-    <h1>{{photo.photographer}}</h1>
-  </header>
+
+    <div class="header">
+        <div class="home-box">
+        &nbsp;
+        </div><!--end home-box-->
+        <div class="name-box">
+        <a class="var uppercase-space">{{photo.photographer}}</a>
+        </div><!--end name-box-->
+        <div class="settings-box">
+          &nbsp;
+        </div><!--end settings-box-->
+        <div class="clearfix"></div>
+    </div>
+
+
 
   <section class='animate-show {{layout}} photoview' ng-show="layout == 'photo'">
     <div data-ng-include data-src="'partials/photo/photo.html'">    
