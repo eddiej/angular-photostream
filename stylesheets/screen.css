@@ -195,7 +195,8 @@ html.photo_details section.photo .image-container, html.photo_details section.de
 /* line 158, ../sass/screen.scss */
 html.photo_details nav {
   z-index: 100;
-  position: relative;
+  position: absolute;
+  top: 200px;
 }
 /* line 159, ../sass/screen.scss */
 html.photo_details #view_options {
@@ -222,10 +223,28 @@ html.photo_details #view_options li a {
 html.photo_details #view_options li.active a {
   background: yellow;
 }
-
-/* line 179, ../sass/screen.scss */
-html.photo_details #theroom {
+/* line 176, ../sass/screen.scss */
+html.photo_details .overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 189, ../sass/screen.scss */
+html.photo_details #theroom {
+  z-index: 8;
   position: fixed;
   text-align: center;
   width: 6578px;
@@ -235,21 +254,21 @@ html.photo_details #theroom {
   left: 50%;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 html.photo_details.room {
   background: #bbb;
 }
-/* line 192, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 html.photo_details.room #theroom {
   background: url(../images/crosshairs.png);
 }
-/* line 195, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 html.photo_details.room #puchase_flex {
   position: absolute;
   right: 0px;
   height: 100%;
   top: 0px;
-  z-index: 100;
+  z-index: 9;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -259,7 +278,7 @@ html.photo_details.room #puchase_flex {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 206, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 html.photo_details.room #puchase_flex #puchase_options {
   background: white;
   padding: 10px;
@@ -312,30 +331,30 @@ html.photo_details.room #puchase_flex #puchase_options {
 /* ==================================================================================================================================================== */
 /* TEXT AND LINKS */
 /* ==================================================================================================================================================== */
-/* line 299, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 h1 {
   font-size: 40px;
 }
 
-/* line 300, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 h2 {
   font-size: 3em;
   font-weight: 200;
 }
 
-/* line 301, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 h3 {
   font-size: 44px;
   font-weight: 100;
 }
 
-/* line 303, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 h5 {
   text-transform: uppercase;
   color: #62687a;
 }
 
-/* line 305, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 p.sub-head-italic {
   font-family: 'AGaramondPro-Italic', Garamond, Georgia, serif;
   font-size: 20px;
@@ -344,7 +363,7 @@ p.sub-head-italic {
   letter-spacing: 0.5px;
 }
 
-/* line 306, ../sass/screen.scss */
+/* line 316, ../sass/screen.scss */
 p.exp-head {
   font-size: 18px;
   color: #666666;
@@ -353,37 +372,37 @@ p.exp-head {
   letter-spacing: 0.3em;
 }
 
-/* line 307, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .var {
   font-family: 'Variable-Bold', Open Sans, Helvetica Neue, sans-serif;
 }
 
-/* line 308, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 .gara-italic {
   font-family: 'AGaramondPro-Italic', Garamond, Georgia, serif;
   letter-spacing: 0.5px;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .uppercase-space {
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
 
-/* line 310, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 h2.tagline {
   font-size: 40px;
   color: #ffffff;
   line-height: 1.5em;
 }
 
-/* line 311, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 p.subtag {
   font-size: 24px;
   color: #fff;
 }
 
-/* line 313, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .gara-spaced {
   font-family: 'AGaramondPro-Regular', Garamond, Georgia, serif;
   letter-spacing: 0.3em;
@@ -391,53 +410,53 @@ p.subtag {
   font-size: 14px;
 }
 
-/* line 314, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .brandon-reg {
   font-family: 'brandon_grotesque_regularRg', Open Sans, Helvetica Neue, sans-serif;
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .brandon-med {
   font-family: 'brandon_grotesquemedium', Open Sans, Helvetica Neue, sans-serif;
 }
 
-/* line 317, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 .color-dash-light-gray {
   color: #bec2cc;
 }
 
-/* line 318, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .color-white {
   color: #ffffff;
 }
 
-/* line 320, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 p {
   color: #666666;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 p.tagline {
   font-size: 1.2em;
   color: #666666;
 }
 
-/* line 325, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .center-text {
   text-align: center;
 }
 
-/* line 326, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 .left-text {
   text-align: left;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .right-text {
   text-align: right;
 }
 
-/* line 329, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 a {
   color: #999999;
   text-decoration: none;
@@ -446,12 +465,12 @@ a {
   transition: all .2s ease-in-out;
 }
 
-/* line 337, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 a:hover {
   color: #0299aa;
 }
 
-/* line 344, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 html.photo_details {
   /* ==================================================================================================================================================== */
   /* END HTML.PHOTO_DETAILS */
@@ -463,32 +482,32 @@ html.photo_details {
   /* END HTML.PHOTO_DETAILS */
   /* ==================================================================================================================================================== */
 }
-/* line 352, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 html.photo_details .header {
   height: 80px;
   background: red;
 }
-/* line 358, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 html.photo_details .proxima {
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
 }
-/* line 361, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 html.photo_details .main-container {
   height: 100%;
 }
-/* line 362, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 html.photo_details .header {
   height: 80px;
 }
-/* line 363, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 html.photo_details .main-content {
   height: 90%;
 }
-/* line 364, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 html.photo_details .grid-cont {
   height: 90%;
 }
-/* line 365, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 html.photo_details .home-box {
   width: 15%;
   float: left;
@@ -496,11 +515,11 @@ html.photo_details .home-box {
   text-align: center;
   display: block;
 }
-/* line 366, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 html.photo_details .home-box a {
   line-height: 80px;
 }
-/* line 367, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 html.photo_details .name-box {
   width: 70%;
   float: left;
@@ -508,11 +527,11 @@ html.photo_details .name-box {
   text-align: center;
   padding-top: 25px;
 }
-/* line 368, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 html.photo_details .name-box a:hover {
   cursor: pointer;
 }
-/* line 369, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 html.photo_details .settings-box {
   width: 15%;
   float: left;
@@ -520,49 +539,49 @@ html.photo_details .settings-box {
   text-align: center;
   padding-top: 20px;
 }
-/* line 370, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 html.photo_details .thumb {
   width: 100%;
   padding: 0px 7px 5px 7px;
 }
-/* line 371, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 html.photo_details .thumb img {
   width: 100%;
 }
-/* line 372, ../sass/screen.scss */
+/* line 382, ../sass/screen.scss */
 html.photo_details .profile-desc p {
   font-size: 16px;
 }
-/* line 373, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 html.photo_details .profile-domain {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 18px;
   margin-bottom: 50px;
 }
-/* line 374, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 html.photo_details .profile-domain p {
   color: #000000;
 }
-/* line 375, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 html.photo_details .social-links-wrapper {
   text-align: center;
   margin-bottom: 70px;
 }
-/* line 376, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 html.photo_details ul.social-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 377, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 html.photo_details ul.social-links li {
   display: inline;
   margin: 0 20px 0 20px;
   color: #b2b2b2;
   font-size: 18px;
 }
-/* line 379, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 html.photo_details .project {
   display: block;
   width: 100%;
@@ -572,18 +591,18 @@ html.photo_details .project {
   position: relative;
   margin-bottom: 10px;
 }
-/* line 380, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 html.photo_details .project:hover {
   opacity: 0.89;
 }
-/* line 381, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 html.photo_details ul.photo-grid {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 393, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 html.photographers_gallery {
   height: auto;
   border: none;
@@ -819,12 +838,12 @@ html.photographers_gallery {
   /* RESPONSIVE */
   /* ==================================================================================================================================================== */
 }
-/* line 395, ../sass/screen.scss */
+/* line 405, ../sass/screen.scss */
 html.photographers_gallery body, html.photographers_gallery .view-container {
   height: auto;
   border: none;
 }
-/* line 410, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 html.photographers_gallery html {
   font-family: sans-serif;
   /* 1 */
@@ -833,11 +852,11 @@ html.photographers_gallery html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-/* line 420, ../sass/screen.scss */
+/* line 430, ../sass/screen.scss */
 html.photographers_gallery body {
   margin: 0;
 }
-/* line 433, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 html.photographers_gallery article,
 html.photographers_gallery aside,
 html.photographers_gallery details,
@@ -852,7 +871,7 @@ html.photographers_gallery section,
 html.photographers_gallery summary {
   display: block;
 }
-/* line 453, ../sass/screen.scss */
+/* line 463, ../sass/screen.scss */
 html.photographers_gallery audio,
 html.photographers_gallery canvas,
 html.photographers_gallery progress,
@@ -862,53 +881,53 @@ html.photographers_gallery video {
   vertical-align: baseline;
   /* 2 */
 }
-/* line 466, ../sass/screen.scss */
+/* line 476, ../sass/screen.scss */
 html.photographers_gallery audio:not([controls]) {
   display: none;
   height: 0;
 }
-/* line 476, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 html.photographers_gallery [hidden],
 html.photographers_gallery template {
   display: none;
 }
-/* line 488, ../sass/screen.scss */
+/* line 498, ../sass/screen.scss */
 html.photographers_gallery a {
   background: transparent;
 }
-/* line 496, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 html.photographers_gallery a:active,
 html.photographers_gallery a:hover {
   outline: 0;
 }
-/* line 508, ../sass/screen.scss */
+/* line 518, ../sass/screen.scss */
 html.photographers_gallery abbr[title] {
   border-bottom: 1px dotted;
 }
-/* line 516, ../sass/screen.scss */
+/* line 526, ../sass/screen.scss */
 html.photographers_gallery b,
 html.photographers_gallery strong {
   font-weight: bold;
 }
-/* line 525, ../sass/screen.scss */
+/* line 535, ../sass/screen.scss */
 html.photographers_gallery dfn {
   font-style: italic;
 }
-/* line 534, ../sass/screen.scss */
+/* line 544, ../sass/screen.scss */
 html.photographers_gallery h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 543, ../sass/screen.scss */
+/* line 553, ../sass/screen.scss */
 html.photographers_gallery mark {
   background: #ff0;
   color: #000;
 }
-/* line 552, ../sass/screen.scss */
+/* line 562, ../sass/screen.scss */
 html.photographers_gallery small {
   font-size: 80%;
 }
-/* line 560, ../sass/screen.scss */
+/* line 570, ../sass/screen.scss */
 html.photographers_gallery sub,
 html.photographers_gallery sup {
   font-size: 75%;
@@ -916,37 +935,37 @@ html.photographers_gallery sup {
   position: relative;
   vertical-align: baseline;
 }
-/* line 568, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 html.photographers_gallery sup {
   top: -0.5em;
 }
-/* line 572, ../sass/screen.scss */
+/* line 583, ../sass/screen.scss */
 html.photographers_gallery sub {
   bottom: -0.25em;
 }
-/* line 583, ../sass/screen.scss */
+/* line 594, ../sass/screen.scss */
 html.photographers_gallery img {
   border: 0;
 }
-/* line 591, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 html.photographers_gallery svg:not(:root) {
   overflow: hidden;
 }
-/* line 602, ../sass/screen.scss */
+/* line 613, ../sass/screen.scss */
 html.photographers_gallery figure {
   margin: 1em 40px;
 }
-/* line 610, ../sass/screen.scss */
+/* line 621, ../sass/screen.scss */
 html.photographers_gallery hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
-/* line 620, ../sass/screen.scss */
+/* line 631, ../sass/screen.scss */
 html.photographers_gallery pre {
   overflow: auto;
 }
-/* line 628, ../sass/screen.scss */
+/* line 639, ../sass/screen.scss */
 html.photographers_gallery code,
 html.photographers_gallery kbd,
 html.photographers_gallery pre,
@@ -954,7 +973,7 @@ html.photographers_gallery samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-/* line 651, ../sass/screen.scss */
+/* line 662, ../sass/screen.scss */
 html.photographers_gallery button,
 html.photographers_gallery input,
 html.photographers_gallery optgroup,
@@ -967,16 +986,16 @@ html.photographers_gallery textarea {
   margin: 0;
   /* 3 */
 }
-/* line 665, ../sass/screen.scss */
+/* line 676, ../sass/screen.scss */
 html.photographers_gallery button {
   overflow: visible;
 }
-/* line 676, ../sass/screen.scss */
+/* line 687, ../sass/screen.scss */
 html.photographers_gallery button,
 html.photographers_gallery select {
   text-transform: none;
 }
-/* line 689, ../sass/screen.scss */
+/* line 700, ../sass/screen.scss */
 html.photographers_gallery button,
 html.photographers_gallery html input[type="button"],
 html.photographers_gallery input[type="reset"],
@@ -986,22 +1005,22 @@ html.photographers_gallery input[type="submit"] {
   cursor: pointer;
   /* 3 */
 }
-/* line 701, ../sass/screen.scss */
+/* line 712, ../sass/screen.scss */
 html.photographers_gallery button[disabled],
 html.photographers_gallery html input[disabled] {
   cursor: default;
 }
-/* line 710, ../sass/screen.scss */
+/* line 721, ../sass/screen.scss */
 html.photographers_gallery button::-moz-focus-inner,
 html.photographers_gallery input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 721, ../sass/screen.scss */
+/* line 732, ../sass/screen.scss */
 html.photographers_gallery input {
   line-height: normal;
 }
-/* line 733, ../sass/screen.scss */
+/* line 744, ../sass/screen.scss */
 html.photographers_gallery input[type="checkbox"],
 html.photographers_gallery input[type="radio"] {
   box-sizing: border-box;
@@ -1009,12 +1028,12 @@ html.photographers_gallery input[type="radio"] {
   padding: 0;
   /* 2 */
 }
-/* line 745, ../sass/screen.scss */
+/* line 756, ../sass/screen.scss */
 html.photographers_gallery input[type="number"]::-webkit-inner-spin-button,
 html.photographers_gallery input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 756, ../sass/screen.scss */
+/* line 767, ../sass/screen.scss */
 html.photographers_gallery input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -1023,43 +1042,43 @@ html.photographers_gallery input[type="search"] {
   /* 2 */
   box-sizing: content-box;
 }
-/* line 769, ../sass/screen.scss */
+/* line 780, ../sass/screen.scss */
 html.photographers_gallery input[type="search"]::-webkit-search-cancel-button,
 html.photographers_gallery input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 778, ../sass/screen.scss */
+/* line 789, ../sass/screen.scss */
 html.photographers_gallery fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
-/* line 789, ../sass/screen.scss */
+/* line 800, ../sass/screen.scss */
 html.photographers_gallery legend {
   border: 0;
   /* 1 */
   padding: 0;
   /* 2 */
 }
-/* line 798, ../sass/screen.scss */
+/* line 809, ../sass/screen.scss */
 html.photographers_gallery textarea {
   overflow: auto;
 }
-/* line 807, ../sass/screen.scss */
+/* line 818, ../sass/screen.scss */
 html.photographers_gallery optgroup {
   font-weight: bold;
 }
-/* line 818, ../sass/screen.scss */
+/* line 829, ../sass/screen.scss */
 html.photographers_gallery table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 823, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 html.photographers_gallery td,
 html.photographers_gallery th {
   padding: 0;
 }
-/* line 830, ../sass/screen.scss */
+/* line 841, ../sass/screen.scss */
 html.photographers_gallery .clearfix:after {
   visibility: hidden;
   display: block;
@@ -1068,41 +1087,41 @@ html.photographers_gallery .clearfix:after {
   clear: both;
   height: 0;
 }
-/* line 838, ../sass/screen.scss */
+/* line 849, ../sass/screen.scss */
 html.photographers_gallery * html .clearfix {
   zoom: 1;
 }
-/* line 839, ../sass/screen.scss */
+/* line 850, ../sass/screen.scss */
 html.photographers_gallery *:first-child + html .clearfix {
   zoom: 1;
 }
-/* line 842, ../sass/screen.scss */
+/* line 853, ../sass/screen.scss */
 html.photographers_gallery *, html.photographers_gallery *:before, html.photographers_gallery *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 902, ../sass/screen.scss */
+/* line 913, ../sass/screen.scss */
 html.photographers_gallery .proxima {
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
 }
-/* line 905, ../sass/screen.scss */
+/* line 916, ../sass/screen.scss */
 html.photographers_gallery .main-container {
   height: 100%;
 }
-/* line 906, ../sass/screen.scss */
+/* line 917, ../sass/screen.scss */
 html.photographers_gallery .header {
   height: 80px;
 }
-/* line 907, ../sass/screen.scss */
+/* line 918, ../sass/screen.scss */
 html.photographers_gallery .main-content {
   height: 90%;
 }
-/* line 908, ../sass/screen.scss */
+/* line 919, ../sass/screen.scss */
 html.photographers_gallery .grid-cont {
   height: 90%;
 }
-/* line 909, ../sass/screen.scss */
+/* line 920, ../sass/screen.scss */
 html.photographers_gallery .home-box {
   width: 15%;
   float: left;
@@ -1110,11 +1129,11 @@ html.photographers_gallery .home-box {
   text-align: center;
   display: block;
 }
-/* line 910, ../sass/screen.scss */
+/* line 921, ../sass/screen.scss */
 html.photographers_gallery .home-box a {
   line-height: 80px;
 }
-/* line 911, ../sass/screen.scss */
+/* line 922, ../sass/screen.scss */
 html.photographers_gallery .name-box {
   width: 70%;
   float: left;
@@ -1122,11 +1141,11 @@ html.photographers_gallery .name-box {
   text-align: center;
   padding-top: 25px;
 }
-/* line 912, ../sass/screen.scss */
+/* line 923, ../sass/screen.scss */
 html.photographers_gallery .name-box a:hover {
   cursor: pointer;
 }
-/* line 913, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 html.photographers_gallery .settings-box {
   width: 15%;
   float: left;
@@ -1134,49 +1153,49 @@ html.photographers_gallery .settings-box {
   text-align: center;
   padding-top: 20px;
 }
-/* line 914, ../sass/screen.scss */
+/* line 925, ../sass/screen.scss */
 html.photographers_gallery .thumb {
   width: 100%;
   padding: 0px 7px 5px 7px;
 }
-/* line 915, ../sass/screen.scss */
+/* line 926, ../sass/screen.scss */
 html.photographers_gallery .thumb img {
   width: 100%;
 }
-/* line 916, ../sass/screen.scss */
+/* line 927, ../sass/screen.scss */
 html.photographers_gallery .profile-desc p {
   font-size: 16px;
 }
-/* line 917, ../sass/screen.scss */
+/* line 928, ../sass/screen.scss */
 html.photographers_gallery .profile-domain {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 18px;
   margin-bottom: 50px;
 }
-/* line 918, ../sass/screen.scss */
+/* line 929, ../sass/screen.scss */
 html.photographers_gallery .profile-domain p {
   color: #000000;
 }
-/* line 919, ../sass/screen.scss */
+/* line 930, ../sass/screen.scss */
 html.photographers_gallery .social-links-wrapper {
   text-align: center;
   margin-bottom: 70px;
 }
-/* line 920, ../sass/screen.scss */
+/* line 931, ../sass/screen.scss */
 html.photographers_gallery ul.social-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 921, ../sass/screen.scss */
+/* line 932, ../sass/screen.scss */
 html.photographers_gallery ul.social-links li {
   display: inline;
   margin: 0 20px 0 20px;
   color: #b2b2b2;
   font-size: 18px;
 }
-/* line 923, ../sass/screen.scss */
+/* line 934, ../sass/screen.scss */
 html.photographers_gallery .project {
   display: block;
   width: 100%;
@@ -1186,17 +1205,17 @@ html.photographers_gallery .project {
   position: relative;
   margin-bottom: 10px;
 }
-/* line 924, ../sass/screen.scss */
+/* line 935, ../sass/screen.scss */
 html.photographers_gallery .project:hover {
   opacity: 0.89;
 }
-/* line 925, ../sass/screen.scss */
+/* line 936, ../sass/screen.scss */
 html.photographers_gallery ul.photo-grid {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 933, ../sass/screen.scss */
+/* line 944, ../sass/screen.scss */
 html.photographers_gallery a.option {
   background: #f2f2f2;
   width: 60px;
@@ -1208,17 +1227,17 @@ html.photographers_gallery a.option {
   margin-top: 0px;
   font-size: 14px;
 }
-/* line 934, ../sass/screen.scss */
+/* line 945, ../sass/screen.scss */
 html.photographers_gallery a.option.current {
   background: #333333;
   color: #fff;
 }
-/* line 941, ../sass/screen.scss */
+/* line 952, ../sass/screen.scss */
 html.photographers_gallery .bg-wrapper {
   height: 100%;
   width: 100%;
 }
-/* line 943, ../sass/screen.scss */
+/* line 954, ../sass/screen.scss */
 html.photographers_gallery .bg-cont {
   background: url("../images/mobile-bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -1227,28 +1246,28 @@ html.photographers_gallery .bg-cont {
   background-size: cover;
   height: 100%;
 }
-/* line 953, ../sass/screen.scss */
+/* line 964, ../sass/screen.scss */
 html.photographers_gallery .desk-frame {
   display: none;
   height: 90%;
 }
-/* line 954, ../sass/screen.scss */
+/* line 965, ../sass/screen.scss */
 html.photographers_gallery .mob-frame {
   height: 90%;
 }
-/* line 956, ../sass/screen.scss */
+/* line 967, ../sass/screen.scss */
 html.photographers_gallery .main-content {
   display: none;
 }
-/* line 957, ../sass/screen.scss */
+/* line 968, ../sass/screen.scss */
 html.photographers_gallery .m-frame-container {
   height: 15%;
 }
-/* line 958, ../sass/screen.scss */
+/* line 969, ../sass/screen.scss */
 html.photographers_gallery .m-frame-details {
   text-align: center;
 }
-/* line 959, ../sass/screen.scss */
+/* line 970, ../sass/screen.scss */
 html.photographers_gallery p.m-item-desc {
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
   text-transform: uppercase;
@@ -1257,7 +1276,7 @@ html.photographers_gallery p.m-item-desc {
   margin: 0;
   padding: 0;
 }
-/* line 960, ../sass/screen.scss */
+/* line 971, ../sass/screen.scss */
 html.photographers_gallery p.m-price {
   font-size: 60px;
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
@@ -1266,44 +1285,44 @@ html.photographers_gallery p.m-price {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-/* line 961, ../sass/screen.scss */
+/* line 972, ../sass/screen.scss */
 html.photographers_gallery .m-frame-sizes {
   padding-bottom: 20px;
   padding-top: 5px;
   margin-top: 5px;
   font-size: 13px;
 }
-/* line 962, ../sass/screen.scss */
+/* line 973, ../sass/screen.scss */
 html.photographers_gallery .m-currency {
   font-size: 18px;
   vertical-align: top;
 }
-/* line 964, ../sass/screen.scss */
+/* line 975, ../sass/screen.scss */
 html.photographers_gallery .m-frame-img {
   text-align: center;
   height: 45%;
   padding-top: 20px;
 }
-/* line 965, ../sass/screen.scss */
+/* line 976, ../sass/screen.scss */
 html.photographers_gallery img.lrg-img {
   width: 400px;
 }
-/* line 966, ../sass/screen.scss */
+/* line 977, ../sass/screen.scss */
 html.photographers_gallery img.med-img {
   width: 360px;
 }
-/* line 967, ../sass/screen.scss */
+/* line 978, ../sass/screen.scss */
 html.photographers_gallery img.sml-img {
   width: 260px;
 }
-/* line 970, ../sass/screen.scss */
+/* line 981, ../sass/screen.scss */
 html.photographers_gallery .m-buy-wrapper {
   text-align: center;
   width: 100%;
   padding-top: 15px;
   height: 15%;
 }
-/* line 971, ../sass/screen.scss */
+/* line 982, ../sass/screen.scss */
 html.photographers_gallery a.m-buy-btn {
   background: none;
   border: 3px solid #707070;
@@ -1317,18 +1336,18 @@ html.photographers_gallery a.m-buy-btn {
   letter-spacing: 0.3em;
   font-size: 13px;
 }
-/* line 972, ../sass/screen.scss */
+/* line 983, ../sass/screen.scss */
 html.photographers_gallery a.m-buy-btn:hover {
   background: #08b43a;
   color: white;
   border: 3px solid #08b43a;
 }
-/* line 975, ../sass/screen.scss */
+/* line 986, ../sass/screen.scss */
 html.photographers_gallery .menu-cont {
   width: 100%;
   height: 25%;
 }
-/* line 976, ../sass/screen.scss */
+/* line 987, ../sass/screen.scss */
 html.photographers_gallery .menu-wrap {
   width: 180px;
   height: 60px;
@@ -1337,25 +1356,25 @@ html.photographers_gallery .menu-wrap {
   position: relative;
   top: 20px;
 }
-/* line 977, ../sass/screen.scss */
+/* line 988, ../sass/screen.scss */
 html.photographers_gallery .m-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 978, ../sass/screen.scss */
+/* line 989, ../sass/screen.scss */
 html.photographers_gallery .m-menu ul li {
   display: inline;
 }
-/* line 980, ../sass/screen.scss */
+/* line 991, ../sass/screen.scss */
 html.photographers_gallery .hide-show {
   font-size: 18px;
 }
-/* line 982, ../sass/screen.scss */
+/* line 993, ../sass/screen.scss */
 html.photographers_gallery #login-form.modal {
   width: 600px;
 }
-/* line 984, ../sass/screen.scss */
+/* line 995, ../sass/screen.scss */
 html.photographers_gallery .modal {
   display: none;
   width: 600px;
@@ -1374,7 +1393,7 @@ html.photographers_gallery .modal {
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 1004, ../sass/screen.scss */
+/* line 1015, ../sass/screen.scss */
 html.photographers_gallery .modal a.close-modal {
   position: absolute;
   top: -12.5px;
@@ -1385,7 +1404,7 @@ html.photographers_gallery .modal a.close-modal {
   text-indent: -9999px;
   background: url(images/close.png) no-repeat 0 0;
 }
-/* line 1015, ../sass/screen.scss */
+/* line 1026, ../sass/screen.scss */
 html.photographers_gallery .modal-spinner {
   display: none;
   width: 64px;
@@ -1402,72 +1421,72 @@ html.photographers_gallery .modal-spinner {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 1032, ../sass/screen.scss */
+/* line 1043, ../sass/screen.scss */
 html.photographers_gallery ::-webkit-input-placeholder {
   color: #c1c1c1;
   font-size: 14px;
 }
-/* line 1036, ../sass/screen.scss */
+/* line 1047, ../sass/screen.scss */
 html.photographers_gallery :-moz-placeholder {
   /* Firefox 18- */
   color: #c1c1c1;
   font-size: 14px;
 }
-/* line 1040, ../sass/screen.scss */
+/* line 1051, ../sass/screen.scss */
 html.photographers_gallery ::-moz-placeholder {
   /* Firefox 19+ */
   color: #c1c1c1;
   font-size: 14px;
 }
-/* line 1044, ../sass/screen.scss */
+/* line 1055, ../sass/screen.scss */
 html.photographers_gallery :-ms-input-placeholder {
   color: #c1c1c1;
   font-size: 14px;
 }
-/* line 1049, ../sass/screen.scss */
+/* line 1060, ../sass/screen.scss */
 html.photographers_gallery .checkout-head {
   width: 100%;
 }
-/* line 1050, ../sass/screen.scss */
+/* line 1061, ../sass/screen.scss */
 html.photographers_gallery .checkout-head p {
   margin: 0;
   padding: 0;
 }
-/* line 1051, ../sass/screen.scss */
+/* line 1062, ../sass/screen.scss */
 html.photographers_gallery .checkout-head-left {
   width: 30%;
   float: left;
   text-align: center;
   padding-top: 30px;
 }
-/* line 1052, ../sass/screen.scss */
+/* line 1063, ../sass/screen.scss */
 html.photographers_gallery .checkout-head-center {
   width: 50%;
   float: left;
   padding-top: 20px;
 }
-/* line 1053, ../sass/screen.scss */
+/* line 1064, ../sass/screen.scss */
 html.photographers_gallery .checkout-head-right {
   width: 20%;
   float: left;
   padding: 20px 30px 0 0;
 }
-/* line 1054, ../sass/screen.scss */
+/* line 1065, ../sass/screen.scss */
 html.photographers_gallery .form-wrapper {
   background: #fdfdfd;
   width: 100%;
   border-top: 1px solid #ccc;
 }
-/* line 1055, ../sass/screen.scss */
+/* line 1066, ../sass/screen.scss */
 html.photographers_gallery .pay-wrapper {
   background: #fff;
 }
-/* line 1056, ../sass/screen.scss */
+/* line 1067, ../sass/screen.scss */
 html.photographers_gallery p.photo-title {
   padding-bottom: 10px !important;
   font-size: 18px;
 }
-/* line 1057, ../sass/screen.scss */
+/* line 1068, ../sass/screen.scss */
 html.photographers_gallery p.price-checkout {
   font-size: 50px;
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
@@ -1475,15 +1494,15 @@ html.photographers_gallery p.price-checkout {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-/* line 1058, ../sass/screen.scss */
+/* line 1069, ../sass/screen.scss */
 html.photographers_gallery p.add-to-checkout {
   padding-top: 40px;
 }
-/* line 1060, ../sass/screen.scss */
+/* line 1071, ../sass/screen.scss */
 html.photographers_gallery form#checkout-form input {
   width: 70%;
 }
-/* line 1061, ../sass/screen.scss */
+/* line 1072, ../sass/screen.scss */
 html.photographers_gallery .checkout-input {
   margin: 0 auto;
   height: 40px;
@@ -1491,36 +1510,36 @@ html.photographers_gallery .checkout-input {
   padding-left: 15px;
   margin-bottom: 20px;
 }
-/* line 1062, ../sass/screen.scss */
+/* line 1073, ../sass/screen.scss */
 html.photographers_gallery .checkout-input:focus {
   border: 1px solid #999999;
 }
-/* line 1063, ../sass/screen.scss */
+/* line 1074, ../sass/screen.scss */
 html.photographers_gallery .checkout-input placeholder {
   color: #ccc;
 }
-/* line 1064, ../sass/screen.scss */
+/* line 1075, ../sass/screen.scss */
 html.photographers_gallery .email-wrapper {
   padding: 25px 0 10px 0;
   border-bottom: 1px solid #ccc;
 }
-/* line 1065, ../sass/screen.scss */
+/* line 1076, ../sass/screen.scss */
 html.photographers_gallery .address-wrapper {
   padding: 25px 0 25px 0;
   border-bottom: 1px solid #ccc;
 }
-/* line 1066, ../sass/screen.scss */
+/* line 1077, ../sass/screen.scss */
 html.photographers_gallery .credit-wrapper {
   padding: 25px 0 25px 0;
   border-bottom: 1px solid #ccc;
 }
-/* line 1067, ../sass/screen.scss */
+/* line 1078, ../sass/screen.scss */
 html.photographers_gallery .pay-wrapper {
   padding: 25px 0 25px 0;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
-/* line 1068, ../sass/screen.scss */
+/* line 1079, ../sass/screen.scss */
 html.photographers_gallery .pay-wrapper input {
   padding: 20px;
   background: #36a8ad;
@@ -1529,87 +1548,87 @@ html.photographers_gallery .pay-wrapper input {
   color: white;
   border: 1px solid #2d8d91;
 }
-/* line 1070, ../sass/screen.scss */
+/* line 1081, ../sass/screen.scss */
 html.photographers_gallery .mail-title {
   width: 70%;
   margin: 0 auto;
 }
-/* line 1071, ../sass/screen.scss */
+/* line 1082, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper {
   width: 70%;
   margin: 0 auto;
 }
-/* line 1072, ../sass/screen.scss */
+/* line 1083, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper input, html.photographers_gallery .card-number-wrapper input {
   height: 40px;
   border: 1px solid #d7d7d7;
   padding-left: 15px;
   margin-bottom: 20px;
 }
-/* line 1073, ../sass/screen.scss */
+/* line 1084, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper input:focus, html.photographers_gallery .card-number-wrapper input:focus {
   border: 1px solid #999999;
 }
-/* line 1074, ../sass/screen.scss */
+/* line 1085, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper input.city {
   width: 50% !important;
   float: left;
   margin-right: 5%;
 }
-/* line 1075, ../sass/screen.scss */
+/* line 1086, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper input.state {
   width: 20% !important;
   float: left;
   margin-right: 5%;
 }
-/* line 1076, ../sass/screen.scss */
+/* line 1087, ../sass/screen.scss */
 html.photographers_gallery .city-wrapper input.zip {
   width: 20% !important;
   float: left;
 }
-/* line 1077, ../sass/screen.scss */
+/* line 1088, ../sass/screen.scss */
 html.photographers_gallery p.mail-to {
   padding-bottom: 15px;
   color: #c1c1c1;
 }
-/* line 1078, ../sass/screen.scss */
+/* line 1089, ../sass/screen.scss */
 html.photographers_gallery .card-number-wrapper {
   width: 70%;
   margin: 0 auto;
 }
-/* line 1079, ../sass/screen.scss */
+/* line 1090, ../sass/screen.scss */
 html.photographers_gallery input.card-number {
   float: left;
   margin-right: 5%;
 }
-/* line 1080, ../sass/screen.scss */
+/* line 1091, ../sass/screen.scss */
 html.photographers_gallery input.mm {
   width: 12.5% !important;
   float: left;
 }
-/* line 1081, ../sass/screen.scss */
+/* line 1092, ../sass/screen.scss */
 html.photographers_gallery input.yy {
   width: 12.5% !important;
   float: left;
   border-left: none;
 }
-/* line 1082, ../sass/screen.scss */
+/* line 1093, ../sass/screen.scss */
 html.photographers_gallery .card-title-left {
   width: 70%;
   margin-right: 5%;
   float: left;
 }
-/* line 1083, ../sass/screen.scss */
+/* line 1094, ../sass/screen.scss */
 html.photographers_gallery .card-title-right {
   width: 25%;
   float: left;
 }
-/* line 1084, ../sass/screen.scss */
+/* line 1095, ../sass/screen.scss */
 html.photographers_gallery input.ccv {
   width: 25% !important;
   float: left;
 }
-/* line 1087, ../sass/screen.scss */
+/* line 1098, ../sass/screen.scss */
 html.photographers_gallery .select-style {
   padding: 0;
   width: 70%;
@@ -1620,7 +1639,7 @@ html.photographers_gallery .select-style {
   margin: 0 auto;
   background: #fff url(images/arrowdown.gif) no-repeat 90% 50%;
 }
-/* line 1089, ../sass/screen.scss */
+/* line 1100, ../sass/screen.scss */
 html.photographers_gallery .select-style select {
   padding: 10px 8px;
   width: 130%;
@@ -1635,29 +1654,29 @@ html.photographers_gallery .select-style select {
   color: #c1c1c1;
   font-size: 14px;
 }
-/* line 1097, ../sass/screen.scss */
+/* line 1108, ../sass/screen.scss */
 html.photographers_gallery .select-style select:focus {
   outline: none;
 }
-/* line 1107, ../sass/screen.scss */
+/* line 1118, ../sass/screen.scss */
 html.photographers_gallery .info-cont {
   height: 90%;
 }
-/* line 1108, ../sass/screen.scss */
+/* line 1119, ../sass/screen.scss */
 html.photographers_gallery .info-wrapper {
   height: 75%;
 }
-/* line 1109, ../sass/screen.scss */
+/* line 1120, ../sass/screen.scss */
 html.photographers_gallery .info-text-cont {
   margin: 0;
   padding: 50px 20px 0px 20px;
 }
-/* line 1110, ../sass/screen.scss */
+/* line 1121, ../sass/screen.scss */
 html.photographers_gallery .info-text-cont p {
   margin: 0;
   padding: 0;
 }
-/* line 1113, ../sass/screen.scss */
+/* line 1124, ../sass/screen.scss */
 html.photographers_gallery .m_info-title {
   font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
   text-transform: uppercase;
@@ -1667,27 +1686,27 @@ html.photographers_gallery .m_info-title {
   color: #333333;
   padding-top: 0px !important;
 }
-/* line 1114, ../sass/screen.scss */
+/* line 1125, ../sass/screen.scss */
 html.photographers_gallery .m_info-desc {
   font-size: 18px;
   color: gray;
   padding-top: 30px !important;
 }
-/* line 1115, ../sass/screen.scss */
+/* line 1126, ../sass/screen.scss */
 html.photographers_gallery .m_location-marker {
   margin-top: 110px;
   font-size: 18px;
   color: #cccccc;
   padding-bottom: 20px !important;
 }
-/* line 1116, ../sass/screen.scss */
+/* line 1127, ../sass/screen.scss */
 html.photographers_gallery .m_location-info {
   text-transform: uppercase;
   color: #cccccc;
   font-size: 13px;
   padding-top: 20px !important;
 }
-/* line 1125, ../sass/screen.scss */
+/* line 1136, ../sass/screen.scss */
 html.photographers_gallery .overlay {
   position: absolute;
   top: 0;
@@ -1700,11 +1719,11 @@ html.photographers_gallery .overlay {
   z-index: 2;
   color: white;
 }
-/* line 1137, ../sass/screen.scss */
+/* line 1148, ../sass/screen.scss */
 html.photographers_gallery .menu-cont {
   z-index: 15 !important;
 }
-/* line 1138, ../sass/screen.scss */
+/* line 1149, ../sass/screen.scss */
 html.photographers_gallery .share-buttons {
   z-index: 10;
   text-align: left;
@@ -1712,11 +1731,11 @@ html.photographers_gallery .share-buttons {
   letter-spacing: 0.3em;
   font-size: 11px;
 }
-/* line 1139, ../sass/screen.scss */
+/* line 1150, ../sass/screen.scss */
 html.photographers_gallery .share-buttons i {
   font-size: 14px;
 }
-/* line 1140, ../sass/screen.scss */
+/* line 1151, ../sass/screen.scss */
 html.photographers_gallery .share-option.head {
   width: 180px;
   background: black;
@@ -1729,7 +1748,7 @@ html.photographers_gallery .share-option.head {
   bottom: 183px;
   padding-left: 30px;
 }
-/* line 1142, ../sass/screen.scss */
+/* line 1153, ../sass/screen.scss */
 html.photographers_gallery a.share-option {
   width: 180px;
   background: #333333;
@@ -1741,7 +1760,7 @@ html.photographers_gallery a.share-option {
   position: absolute;
   padding-left: 30px;
 }
-/* line 1143, ../sass/screen.scss */
+/* line 1154, ../sass/screen.scss */
 html.photographers_gallery a.share-option.fb {
   width: 180px;
   background: #333333;
@@ -1753,7 +1772,7 @@ html.photographers_gallery a.share-option.fb {
   position: absolute;
   bottom: 61px;
 }
-/* line 1144, ../sass/screen.scss */
+/* line 1155, ../sass/screen.scss */
 html.photographers_gallery a.share-option.em {
   width: 180px;
   background: #333333;
@@ -1765,25 +1784,25 @@ html.photographers_gallery a.share-option.em {
   position: absolute;
   bottom: 122px;
 }
-/* line 1145, ../sass/screen.scss */
+/* line 1156, ../sass/screen.scss */
 html.photographers_gallery .share-buttons i {
   margin-right: 15px;
 }
-/* line 1146, ../sass/screen.scss */
+/* line 1157, ../sass/screen.scss */
 html.photographers_gallery a.share-option:hover {
   background: black;
 }
-/* line 1152, ../sass/screen.scss */
+/* line 1163, ../sass/screen.scss */
 html.photographers_gallery .profile_cont {
   height: 90%;
   padding-top: 30px;
 }
-/* line 1153, ../sass/screen.scss */
+/* line 1164, ../sass/screen.scss */
 html.photographers_gallery .profile-close {
   width: 100%;
   text-align: center;
 }
-/* line 1154, ../sass/screen.scss */
+/* line 1165, ../sass/screen.scss */
 html.photographers_gallery a.x_profile_close {
   text-indent: 100%;
   white-space: nowrap;
@@ -1795,12 +1814,12 @@ html.photographers_gallery a.x_profile_close {
   margin: 0px auto;
   opacity: 0.7;
 }
-/* line 1155, ../sass/screen.scss */
+/* line 1166, ../sass/screen.scss */
 html.photographers_gallery a.x_profile_close:hover {
   opacity: 1;
 }
 @media screen and (min-width: 420px) {
-  /* line 1166, ../sass/screen.scss */
+  /* line 1177, ../sass/screen.scss */
   html.photographers_gallery .bg-cont {
     background: url("../images/mobile-bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -1811,12 +1830,12 @@ html.photographers_gallery a.x_profile_close:hover {
   }
 }
 @media screen and (min-width: 640px) {
-  /* line 393, ../sass/screen.scss */
+  /* line 403, ../sass/screen.scss */
   html.photographers_gallery {
     /* Show */
     /* Room */
   }
-  /* line 1184, ../sass/screen.scss */
+  /* line 1195, ../sass/screen.scss */
   html.photographers_gallery .bg-cont {
     background: url("../images/room-img.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -1825,25 +1844,25 @@ html.photographers_gallery a.x_profile_close:hover {
     background-size: cover;
     height: 100%;
   }
-  /* line 1196, ../sass/screen.scss */
+  /* line 1207, ../sass/screen.scss */
   html.photographers_gallery img.m_show_img {
     width: 90%;
     padding-top: 80px;
     margin: 0 auto;
   }
-  /* line 1200, ../sass/screen.scss */
+  /* line 1211, ../sass/screen.scss */
   html.photographers_gallery img.lrg-img {
     width: 410px;
   }
-  /* line 1201, ../sass/screen.scss */
+  /* line 1212, ../sass/screen.scss */
   html.photographers_gallery img.med-img {
     width: 390px;
   }
-  /* line 1202, ../sass/screen.scss */
+  /* line 1213, ../sass/screen.scss */
   html.photographers_gallery img.sml-img {
     width: 340px;
   }
-  /* line 1204, ../sass/screen.scss */
+  /* line 1215, ../sass/screen.scss */
   html.photographers_gallery .project {
     display: block;
     width: 33.3333336%;
@@ -1855,7 +1874,7 @@ html.photographers_gallery a.x_profile_close:hover {
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 393, ../sass/screen.scss */
+  /* line 403, ../sass/screen.scss */
   html.photographers_gallery {
     /* Main */
     /* Show */
@@ -1863,7 +1882,7 @@ html.photographers_gallery a.x_profile_close:hover {
     /* Info */
     /* Share */
   }
-  /* line 1213, ../sass/screen.scss */
+  /* line 1224, ../sass/screen.scss */
   html.photographers_gallery .project {
     display: block;
     width: 33.3333336%;
@@ -1873,13 +1892,13 @@ html.photographers_gallery a.x_profile_close:hover {
     position: relative;
     margin: 0;
   }
-  /* line 1218, ../sass/screen.scss */
+  /* line 1229, ../sass/screen.scss */
   html.photographers_gallery img.m_show_img {
     width: 65%;
     padding-top: 30px;
     margin: 0 auto;
   }
-  /* line 1220, ../sass/screen.scss */
+  /* line 1231, ../sass/screen.scss */
   html.photographers_gallery .thumb {
     width: 33.3333336%;
     height: 33.3333336%;
@@ -1887,76 +1906,76 @@ html.photographers_gallery a.x_profile_close:hover {
     background: gray;
     padding: 0;
   }
-  /* line 1221, ../sass/screen.scss */
+  /* line 1232, ../sass/screen.scss */
   html.photographers_gallery .thumb img {
     width: 100%;
     height: 100%;
   }
-  /* line 1223, ../sass/screen.scss */
+  /* line 1234, ../sass/screen.scss */
   html.photographers_gallery .avatar-wrap img {
     width: 100px;
     height: 100px;
   }
-  /* line 1228, ../sass/screen.scss */
+  /* line 1239, ../sass/screen.scss */
   html.photographers_gallery .desk-frame {
     display: block;
     height: 90%;
   }
-  /* line 1229, ../sass/screen.scss */
+  /* line 1240, ../sass/screen.scss */
   html.photographers_gallery .mob-frame {
     display: none;
   }
-  /* line 1231, ../sass/screen.scss */
+  /* line 1242, ../sass/screen.scss */
   html.photographers_gallery .frame-container {
     width: 100%;
     height: 75%;
     text-align: center;
   }
-  /* line 1232, ../sass/screen.scss */
+  /* line 1243, ../sass/screen.scss */
   html.photographers_gallery .frame-left {
     width: 22.5%;
     float: left;
   }
-  /* line 1233, ../sass/screen.scss */
+  /* line 1244, ../sass/screen.scss */
   html.photographers_gallery .frame-center {
     width: 55%;
     float: left;
     padding-top: 40px;
   }
-  /* line 1234, ../sass/screen.scss */
+  /* line 1245, ../sass/screen.scss */
   html.photographers_gallery .frame-right {
     width: 22.5%;
     float: left;
     text-align: left;
     padding-top: 80px;
   }
-  /* line 1235, ../sass/screen.scss */
+  /* line 1246, ../sass/screen.scss */
   html.photographers_gallery .room-view {
     position: absolute;
     z-index: -1;
   }
-  /* line 1236, ../sass/screen.scss */
+  /* line 1247, ../sass/screen.scss */
   html.photographers_gallery .frame-center img {
     padding-top: 5%;
   }
-  /* line 1238, ../sass/screen.scss */
+  /* line 1249, ../sass/screen.scss */
   html.photographers_gallery .frame-sizes-wrapper {
     text-align: center;
     display: table;
     margin-bottom: 30px;
   }
-  /* line 1239, ../sass/screen.scss */
+  /* line 1250, ../sass/screen.scss */
   html.photographers_gallery .frame-sizes-wrapper ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  /* line 1240, ../sass/screen.scss */
+  /* line 1251, ../sass/screen.scss */
   html.photographers_gallery .frame-sizes-wrapper ul li {
     display: inline;
     font-size: 12px;
   }
-  /* line 1241, ../sass/screen.scss */
+  /* line 1252, ../sass/screen.scss */
   html.photographers_gallery a.option-frame {
     background: #f2f2f2;
     width: 50px;
@@ -1968,12 +1987,12 @@ html.photographers_gallery a.x_profile_close:hover {
     padding-top: 0px;
     margin-top: 0px;
   }
-  /* line 1242, ../sass/screen.scss */
+  /* line 1253, ../sass/screen.scss */
   html.photographers_gallery a.option-frame.current {
     background: #333333;
     color: #fff;
   }
-  /* line 1243, ../sass/screen.scss */
+  /* line 1254, ../sass/screen.scss */
   html.photographers_gallery a.purchase-btn {
     background: none;
     border: 3px solid #707070;
@@ -1987,17 +2006,17 @@ html.photographers_gallery a.x_profile_close:hover {
     letter-spacing: 0.3em;
     font-size: 13px;
   }
-  /* line 1244, ../sass/screen.scss */
+  /* line 1255, ../sass/screen.scss */
   html.photographers_gallery a.purchase-btn:hover {
     background: #08b43a;
     color: white;
     border: 3px solid #08b43a;
   }
-  /* line 1245, ../sass/screen.scss */
+  /* line 1256, ../sass/screen.scss */
   html.photographers_gallery .info-btn {
     font-size: 20px;
   }
-  /* line 1248, ../sass/screen.scss */
+  /* line 1259, ../sass/screen.scss */
   html.photographers_gallery p.item-desc {
     font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
     text-transform: uppercase;
@@ -2006,7 +2025,7 @@ html.photographers_gallery a.x_profile_close:hover {
     margin: 0;
     padding: 0;
   }
-  /* line 1249, ../sass/screen.scss */
+  /* line 1260, ../sass/screen.scss */
   html.photographers_gallery p.price {
     font-size: 60px;
     font-family: Proxima Nova, Open Sans, Helvetica Neue, sans-serif;
@@ -2015,31 +2034,31 @@ html.photographers_gallery a.x_profile_close:hover {
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  /* line 1250, ../sass/screen.scss */
+  /* line 1261, ../sass/screen.scss */
   html.photographers_gallery .currency {
     font-size: 18px;
     vertical-align: top;
   }
-  /* line 1251, ../sass/screen.scss */
+  /* line 1262, ../sass/screen.scss */
   html.photographers_gallery .frame-sizes {
     padding-bottom: 20px;
     padding-top: 0px;
     margin-top: 5px;
     font-size: 13px;
   }
-  /* line 1252, ../sass/screen.scss */
+  /* line 1263, ../sass/screen.scss */
   html.photographers_gallery i.hide-show {
     display: none;
   }
-  /* line 1253, ../sass/screen.scss */
+  /* line 1264, ../sass/screen.scss */
   html.photographers_gallery img.lrg-img {
     width: 480px;
   }
-  /* line 1254, ../sass/screen.scss */
+  /* line 1265, ../sass/screen.scss */
   html.photographers_gallery img.med-img {
     width: 390px;
   }
-  /* line 1255, ../sass/screen.scss */
+  /* line 1266, ../sass/screen.scss */
   html.photographers_gallery img.sml-img {
     width: 340px;
   }

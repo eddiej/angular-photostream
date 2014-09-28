@@ -155,7 +155,7 @@ html.photo_details { /* The individual photo page*/
   
   
   /* Utility Buttons */
-  nav {z-index:100;position:relative;}
+  nav {z-index:100;position:absolute;top:200px;}
   #view_options{z-index:100;
     position:absolute;bottom:10px;
     margin:0 auto;left:0;right:0;
@@ -173,11 +173,21 @@ html.photo_details { /* The individual photo page*/
       background:yellow;
     }
   }
+  .overlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:10;background:rgba(255,255,255,0.5);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
 }
 
 html.photo_details{
   #theroom{
-    z-index:10;
+    z-index:8;
     position:fixed;
   	text-align:center;
     width:6578px;
@@ -194,7 +204,7 @@ html.photo_details.room{
 	}
 	#puchase_flex{
 	  position:absolute;right:0px;height:100%;top:0px;
-	  z-index:100;
+	  z-index:9;
 	  display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -564,7 +574,8 @@ html.photographers_gallery{
     position: relative;
     vertical-align: baseline;
   }
-  
+
+
   sup {
     top: -0.5em;
   }
