@@ -4,6 +4,7 @@ $(document).on('page:load', runscript)
 function runscript() {
  $(window).on("throttledresize", reposition); 
  reposition();
+ Stripe.setPublishableKey('YOUR-KEY-COMES-HERE');
 }
 
 function reposition( event ){

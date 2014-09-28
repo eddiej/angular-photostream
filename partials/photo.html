@@ -5,7 +5,7 @@
           <a href='#/photos/'> <i class="fa fa-th"></i></a>
         </div><!--end home-box-->
         <div class="name-box">
-        <a class="var uppercase-space">{{photo.photographer}}</a>
+        <a class="var uppercase-space" ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')" >{{photo.photographer}}{{$window.Stripe}}</a>
         </div><!--end name-box-->
         <div class="settings-box">
           &nbsp;
@@ -27,6 +27,10 @@
     <div data-ng-include data-src="'partials/photo/profile.html'">
     </div>
   </section>
+  <section class='animate-shows {{layout}} photoview scrollableoverlay' ng-show="overlay == 'purchase'">
+    <div data-ng-include data-src="'partials/photo/purchase.html'">
+    </div>
+  </section>
   <section class='animate-show {{layout}} photoview' ng-show="layout == 'room'">
     <div data-ng-include data-src="'partials/photo/room.html'">
     </div>
@@ -44,6 +48,6 @@
     <li ng-class="{active: layout == 'photo'}" ng-click="layout = 'photo'"><a><i class="fa fa-expand"></i></a></li>
     <li ng-class="{active: layout == 'room'}" ng-click="layout = 'room'"><a><i class="fa fa-tags"></i></a></li>
     <li ng-class="{active: overlay == 'detail'}" ng-click="overlay = (overlay == 'detail' ? '' : 'detail')"><a><i class="fa fa-bars"></i></a></li>
-    <li ng-class="{active: overlay == 'profile'}" ng-click="overlay = (overlay == 'profile' ? '' : 'profile')"><a><i class="fa fa-user"></i></a></li>
+    <li ng-class="{active: overlay == 'purchase'}" ng-click="overlay = (overlay == 'purchase' ? '' : 'purchase')"><a class="pur">Purchase</a></li>
   </ul>
 </section>
