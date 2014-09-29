@@ -188,7 +188,7 @@ html.photo_details { /* The individual photo page*/
     transition: all .2s ease-in-out;
 
     .flexbox {
-      margin:0 200px;;text-align:center;;
+      margin:0 200px;text-align:center;
     }
   }
   .scrollableoverlay{position:absolute;top:0;left:0;height:auto;min-height:100%;}
@@ -224,7 +224,7 @@ html.photo_details.room{
     -webkit-justify-content: center;
     justify-content: center;
 	  #puchase_options{
-	    background:white;padding:10px;margin-right:20px;
+	    background:white;padding:10px;margin-right:45px;
     }
 	}
 }
@@ -380,20 +380,12 @@ html.photo_details {
   
   nav {margin: 0 auto; position: fixed; top: 42%;width: 100%; z-index: 9; 
     
-    a.prev { background-image: url("../images/right-arrow-small.png");
-    display: block;
-    height: 31px;
-    opacity: 0.5;
-    left: 40px;
-    width: 38px;}
+    a.prev, span.prev_null { left: 25px; position: fixed;}
+    a.next, span.next_null { right: 25px; position:fixed;}
     
-    a.next {background-image: url("../images/right-arrow-small.png");
-    display: block;
-    height: 31px;
-    opacity: 0.5;
-    right: 40px;
-    width: 38px;}
-  
+    
+    a i { font-size: 40px;}
+    span i { font-size: 40px; color: #ecedf3;}  
   }
   
   
@@ -420,6 +412,61 @@ html.photo_details {
   p.price { font-size: 60px;font-family:Proxima Nova, Open Sans, Helvetica Neue, sans-serif; margin: 0px; padding-top: 20px;padding-bottom: 0px;margin-bottom: 0px;}
   
     .currency { font-size: 18px; vertical-align: top; }
+    
+    
+    
+  .checkout-head { width: 100%;}
+  .checkout-head p { margin: 0; padding: 0;}
+  .checkout-head-center { width: 100%; float: left; padding-top: 20px;}
+  .form-wrapper {width: 1000px; border-bottom: 1px solid #ccc;}
+  .form-border { border: 1px solid #ccc;}
+  p.photo-title { padding-bottom: 10px !important; font-size: 18px;}
+  p.price-checkout { font-size: 50px;font-family:Proxima Nova, Open Sans, Helvetica Neue, sans-serif; margin: 0px; padding-top: 15px;padding-bottom: 15px;}
+  p.add-to-checkout { padding-top: 40px;}
+  
+  form#checkout-form input{width: 70%;}
+  form {
+    input { margin:0; padding:0;}
+  }
+  .checkout-input { margin: 0 auto; height: 40px; border: 1px solid #d7d7d7; padding-left: 15px; margin-bottom: 20px;}
+  .checkout-input:focus { border: 1px solid #999999;}
+  .checkout-input placeholder { color: #ccc;}
+  .email-wrapper { padding: 25px 0 10px 0;}
+  .address-wrapper { padding: 25px 0 25px 0;  width: 50%; float:left;}
+  .credit-wrapper { padding: 25px 0 25px 0;  width: 50%; float:left; }
+  .pay-wrapper {padding: 25px 0 25px 0; text-align: center; }
+  .pay-wrapper input { padding: 20px; background: #36a8ad; border: none; border-radius: 3px;color: white;border: 1px solid #2d8d91; }
+  
+  .mail-title { width: 70%; margin: 0 auto;}
+  .city-wrapper { width: 70%; margin: 0 auto;}
+  .city-wrapper input, .card-number-wrapper input {height: 40px; border: 1px solid #d7d7d7; padding-left: 15px; margin-bottom: 20px; }
+  .city-wrapper input:focus, .card-number-wrapper input:focus {border: 1px solid #999999; }
+  .city-wrapper input.city { width: 35% !important; float: left; margin-right: 5%;}
+  .city-wrapper input.state { width: 20% !important; float: left; margin-right:5%; }
+  .city-wrapper input.zip { width: 20% !important; float: left;}
+  p.mail-to { padding-bottom: 15px; color: #c1c1c1;}
+  .card-number-wrapper {width: 70%; margin: 0 auto; }
+  input.card-number { float: left; margin-right: 5%; width: 50% !important;}
+  input.mm { width: 12.5% !important; float: left;}
+  input.yy {width: 12.5% !important; float: left; border-left: none; }
+  .card-title-left { width: 70%; margin-right: 5%;float: left;}
+  .card-title-right { width: 25%;float: left;}
+  input.ccv { width: 25% !important; float: left;}
+  
+  
+  .select-style {padding: 0;width: 70%;border: 1px solid #ccc;border-radius: 2px;overflow: hidden;background-color: #fff;margin: 0 auto;background: #fff url(images/arrowdown.gif) no-repeat 90% 50%;}
+  
+  .select-style select {padding: 10px 8px;width: 130%;height: 40px;border: none;box-shadow: none;background-color: transparent;background-image: none;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      color: #c1c1c1;
+      font-size: 14px;
+  }
+  
+  .select-style select:focus {
+      outline: none;
+  }
 
   
   

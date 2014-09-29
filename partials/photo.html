@@ -38,10 +38,10 @@
 
 
   <nav>
-    <a href='#/photographers/{{username}}/{{photo.prev}}' ng-if="photo.prev != null">Previous</a>
-    <span ng-if="photo.prev == null">Previous</span>
-    <a href='#/photographers/{{username}}/{{photo.next}}' ng-if="photo.next != null">Next</a>
-    <span ng-if="photo.next == null">Next</span>
+    <a href='#/photographers/{{username}}/{{photo.prev}}' ng-if="photo.prev != null" class="prev"><i class="fa fa-angle-left"></i></a>
+    <span ng-if="photo.prev == null" class="prev_null"><i class="fa fa-angle-left"></i></span>
+    <a href='#/photographers/{{username}}/{{photo.next}}' ng-if="photo.next != null" class="next"><i class="fa fa-angle-right"></i></a>
+    <span ng-if="photo.next == null" class="next_null"><i class="fa fa-angle-right"></i></span>
   </nav>
 
   <ul id='view_options'>
