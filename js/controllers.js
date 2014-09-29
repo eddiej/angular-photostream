@@ -115,10 +115,33 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
       $rootScope.bodyidentifier = 'photo_details '+ $scope.layout;
     });
     
+    
+    
+    var METRE_PIXEL_SCALE = 1
+    var ACTUAL_HEIGHT = 400
+    var GALLERY_BOUND_HEIGHT = 400
+    var GALLERY_PADDING_TOP = 250
+    var GALLERY_PADDING_BOTTOM = 250
+    
+    var height = METRE_PIXEL_SCALE * ACTUAL_HEIGHT
+    var topheight_minuspadding = ((height < GALLERY_BOUND_HEIGHT) ? GALLERY_BOUND_HEIGHT : height) + GALLERY_PADDING_BOTTOM
+    var topheight = topheight_minuspadding + GALLERY_PADDING_TOP
+    var pad = ((height < GALLERY_BOUND_HEIGHT) ? ((GALLERY_BOUND_HEIGHT - height)/2) : 0)
+    
+    $scope.metre_pixel_scale = METRE_PIXEL_SCALE
+    $scope.actual_height = ACTUAL_HEIGHT
+    $scope.gallery_bound_height = GALLERY_BOUND_HEIGHT
+    $scope.gallery_padding_top = GALLERY_PADDING_TOP
+    $scope.gallery_padding_bottom = GALLERY_PADDING_BOTTOM
+    $scope.h = height
+    $scope.topheight_minuspadding = topheight_minuspadding
+    $scope.topheight = topheight
+    $scope.pad = pad
+    
+    reposition();
     $scope.photo = Photo.get({id: $routeParams.photoId, username: $routeParams.username}, function(data){
       reposition();
     });
-    
     
   }
 ]);

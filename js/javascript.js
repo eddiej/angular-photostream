@@ -10,5 +10,8 @@ function runscript() {
 function reposition( event ){
   scale = $(window).height() / (( $('#theroom').attr('data-topheight')*1) +  589)
   $('#theroom').css('transform',"scale("+scale+")")
-  console.info($('#theroom').size())
+  
+  otherscale = $(window).height() / (( $('#nonroom').attr('data-topheight')*1) +  589)
+  $('#nonroom').css('transform',"scale("+otherscale*0.9+")")
+
 }

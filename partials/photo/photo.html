@@ -1,5 +1,11 @@
-<div id='theroom'
-  data-topheight='{{(3.1 * 100)}}'
-  style=';height:{{(3.1 * 100)}}px;margin-top:-{{((3.1 * 100)  + 589)/2}}px; border:2px solid white;'>
-    <img ng-src="{{photo.display.url}}" style='margin-top:100px;' height='700px'> 
+<div id='nonroom'
+data-topheight='{{topheight}}'
+style='padding-top:{{gallery_padding_top}}px; height: {{topheight_minuspadding}}px; margin-top:-{{((topheight + 589)/2)}}px;'>
+  <div style='padding-top:{{pad}};padding-bottom:{{pad}}px'>
+    <img ng-src="{{photo.display.url}}" style='max-width:inherit;' 
+      height='{{metre_pixel_scale * 1000}}'
+      width='{{(metre_pixel_scale * 1000) * (photo.width / photo.height)}}'> 
+  </div>
 </div>
+
+  
