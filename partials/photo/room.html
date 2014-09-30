@@ -1,6 +1,7 @@
 <div id='theroom'
 data-topheight='{{topheight}}'
-style='padding-top:{{gallery_padding_top}}px; height: {{topheight_minuspadding}}px; margin-top:-{{((topheight + 589)/2)}}px;'>
+ng-style="room_css"
+>
   <div style='padding-top:{{pad}};padding-bottom:{{pad}}px'>
     <img ng-src="{{photo.framed_mini.url}}" style='max-width:inherit;' 
       height='{{metre_pixel_scale * actual_height}}'

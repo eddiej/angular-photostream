@@ -2,9 +2,8 @@ $(document).ready(runscript)
 $(document).on('page:load', runscript)
 
 function runscript() {
- $(window).on("throttledresize", reposition); 
  reposition();
- Stripe.setPublishableKey('YOUR-KEY-COMES-HERE');
+ $(window).on("throttledresize", reposition); 
 }
 
 function reposition( event ){
@@ -13,5 +12,5 @@ function reposition( event ){
   
   otherscale = $(window).height() / (( $('#nonroom').attr('data-topheight')*1) +  589)
   $('#nonroom').css('transform',"scale("+otherscale*0.9+")")
-
+  
 }

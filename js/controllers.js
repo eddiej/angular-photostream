@@ -122,12 +122,12 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
     var GALLERY_BOUND_HEIGHT = 400
     var GALLERY_PADDING_TOP = 250
     var GALLERY_PADDING_BOTTOM = 250
-    
+
     var height = METRE_PIXEL_SCALE * ACTUAL_HEIGHT
     var topheight_minuspadding = ((height < GALLERY_BOUND_HEIGHT) ? GALLERY_BOUND_HEIGHT : height) + GALLERY_PADDING_BOTTOM
     var topheight = topheight_minuspadding + GALLERY_PADDING_TOP
     var pad = ((height < GALLERY_BOUND_HEIGHT) ? ((GALLERY_BOUND_HEIGHT - height)/2) : 0)
-    
+
     $scope.metre_pixel_scale = METRE_PIXEL_SCALE
     $scope.actual_height = ACTUAL_HEIGHT
     $scope.gallery_bound_height = GALLERY_BOUND_HEIGHT
@@ -138,9 +138,27 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
     $scope.topheight = topheight
     $scope.pad = pad
     
-    reposition();
-    $scope.photo = Photo.get({id: $routeParams.photoId, username: $routeParams.username}, function(data){
-      reposition();
+    $scope.photo = Photo.get({id: $routeParams.photoId, username: $routeParams.username}, function(data){   
+      $scope.nonroom_css = {
+        'transform': "scale("+get_nonroom_scale()+")",
+        'padding-top': GALLERY_PADDING_TOP+'px',
+        'height': topheight_minuspadding+'px',
+        'margin-top': -((topheight + 589)/2)+'px'
+      };
+      $scope.room_css = {
+        'transform': "scale("+get_room_scale()+")",
+        'padding-top': GALLERY_PADDING_TOP+'px',
+        'height': topheight_minuspadding+'px',
+        'margin-top': -((topheight + 589)/2)+'px'
+      }
+      function get_nonroom_scale() {
+        return $(window).height() / (( $('#nonroom').attr('data-topheight')*1) +  589)
+      }
+      function get_room_scale() {
+        return $(window).height() / (( $('#theroom').attr('data-topheight')*1) +  589)
+      }
+       
+      
     });
     
   }
