@@ -8,10 +8,6 @@
 
 /* After the transition this will be the only class remaining */
 .animate-show {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
   opacity: 1; /* Default value but added for clarity */
 }
@@ -36,10 +32,6 @@
 ul.photos li.ng-enter,
 ul.photos li.ng-leave,
 ul.photos li.ng-move {
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
-  -o-transition: 0.5s linear all;
-  transition: 0.5s linear all;
 }
 
 ul.photos li.ng-enter,
@@ -83,46 +75,13 @@ ul.photos li.ng-leave.ng-leave-active {
 }
 
 .view-frame.ng-enter {
-  -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
-  animation: 0.5s fade-in;
   z-index: 100;
 }
 
 .view-frame.ng-leave {
-  -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
   z-index: 99;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-moz-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
 
 /*.photo, .detail {border:1px solid black;height:100px;}
 .photo {background:red;}
@@ -139,8 +98,8 @@ ul.photos{
   list-style:none;
 }
 
-html, body, .view-container {padding:0;margin:0;height:100%;border:1px solid red;}
-.view-frame {border:1px solid transparent;}
+html, body, .view-container {padding:0;margin:0;height:100%;}
+.view-frame {}
 
 html.photo_details { /* The individual photo page*/
   /* The 3 different photo views */
@@ -159,7 +118,7 @@ html.photo_details { /* The individual photo page*/
   #view_options{z-index:100;
     position:fixed;bottom:20px;
     margin:0 auto;left:0;right:0;
-    width:430px;
+    width:362px;
     padding:0;
     li {
       display:inline-block; 
@@ -205,7 +164,7 @@ html.photo_details{
   	padding-bottom:589px;
   	top:50%;
   	left:50%;
-  	background: #DFDBD8 url(../images/artdiproom.png) no-repeat center bottom;
+  	background: #fff url(../images/bg4.jpg) no-repeat center bottom;
     img {
       display:block;margin:0 auto;
     }
@@ -226,7 +185,7 @@ html.photo_details.room{
     -webkit-justify-content: center;
     justify-content: center;
 	  #puchase_options{
-	    background:white;padding:10px;margin-right:45px;
+	    padding:10px;margin-right:45px;
     }
 	}
 }
@@ -455,6 +414,9 @@ html.photo_details {
   .card-title-right { width: 25%;float: left;}
   input.ccv { width: 25% !important; float: left;}
   
+  .credit_img { cursor:pointer; opacity: 0.9;}
+  .credit_img:hover { opacity: 1;}
+  
   
   .select-style {padding: 0;width: 70%;border: 1px solid #ccc;border-radius: 2px;overflow: hidden;background-color: #fff;margin: 0 auto;background: #fff url(images/arrowdown.gif) no-repeat 90% 50%;}
   
@@ -469,6 +431,27 @@ html.photo_details {
   .select-style select:focus {
       outline: none;
   }
+  
+  @media screen and (min-width: 320px) {
+
+  #puchase_options { display:none; }
+
+  }
+  
+  
+  @media screen and (min-width: 420px) {
+
+  #puchase_options { display:none; }
+
+  }
+  
+    @media screen and (min-width: 640px) {
+
+  #puchase_options { display:block;}
+
+  }
+
+
 
   
   
