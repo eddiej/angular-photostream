@@ -155,6 +155,7 @@ html.photo_details { /* The individual photo page*/
 }
 
 html.photo_details{
+  #preload {background:url(../images/bg4.jpg);width:1px;height:1px;display:absolute;top:-1px;}
   #theroom, #nonroom{
     z-index:8;
     position:fixed;

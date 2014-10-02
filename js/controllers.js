@@ -106,13 +106,17 @@ photosControllers.controller('PhotoDetailsCtrl', ['$scope', '$rootScope', '$rout
   }
 ]);
 
-photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location',
-  function ($scope, $rootScope, $routeParams, Photo, Location){
-    $scope.layout = 'photo';
+photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', '$routeParams', 'Photo', 'Location', 'UserService',
+  function ($scope, $rootScope, $routeParams, Photo, Location, UserService){
+
+    $scope.layout = UserService.get()
     $scope.username = $routeParams.username;
+    
+    
     
     $scope.$watch('layout', function(){
       $rootScope.bodyidentifier = 'photo_details '+ $scope.layout;
+      UserService.set($scope.layout)
     });
     
     
@@ -151,6 +155,22 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
         'height': topheight_minuspadding+'px',
         'margin-top': -((topheight + 589)/2)+'px'
       }
+      $scope.price_m = 45 + data.price_m
+      
+     
+      if(data.original_image_width >= data.original_image_height){
+        w = 16
+        h = 16 * (data.original_image_height / data.original_image_width)
+        h = Math.round(h * 1) / 1
+      }else{
+        h = 16
+        w = 16 * (data.original_image_width / data.original_image_height)
+        w = Math.round(w * 1) / 1
+      } 
+      
+      $scope.photo_width = w
+      $scope.photo_height = h
+      
       function get_nonroom_scale() {
         return $(window).height() / (( $('#nonroom').attr('data-topheight')*1) +  589)
       }
@@ -171,17 +191,17 @@ photosControllers.run(function($rootScope, $templateCache) {
   });
 });
 
-// photosControllers.factory('UserService', function() {
-//   var cls='start'
-//   return {
-//     get: function(){
-//       return cls;
-//     },
-//     set: function(value){
-//       cls=value;
-//     }
-//   };
-// });
+photosControllers.factory('UserService', function() {
+  var cls='photo'
+  return {
+    get: function(){
+      return cls;
+    },
+    set: function(value){
+      cls=value;
+    }
+  };
+});
 // photosControllers.run(function($rootScope) {
     // $rootScope.bodyidentifier = 'index';
 // })

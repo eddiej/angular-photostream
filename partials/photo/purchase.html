@@ -2,16 +2,16 @@
   <div class="checkout-head">
     <div class="checkout-head-center">
       <p class="gara-italic photo-title">{{photo.title}}</p>
-      <p class="item-desc">Medium Framed Print</p>
-      <p class="price-checkout"><span class="currency">€</span>90</p>
-      <p class="frame-sizes gara-spaced"> 18” x 12” In.</p></br>
+      <p class="item-desc">Medium Framed Print</p>  
+      <p class="price-checkout"><span class="currency">€</span>{{price_m}}</p>
+      <p class="frame-sizes gara-spaced"> {{photo_width}}" x {{photo_height}}" In.</p></br>
     </div><!--end checkout-head-center-->
     <div class="clearfix"></div>
     
     <form id="checkout-form">
-        
+        <a href='http://www.lokofoto.com/photos/{{photo.id}}' target='_blank'>
         <img class="credit_img" src="images/credit_img.png">
-
+        </a>
       </div><!--end form-wrapper-->
       
       
