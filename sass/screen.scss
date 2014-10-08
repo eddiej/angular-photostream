@@ -154,7 +154,6 @@ html.photo_details { /* The individual photo page*/
   
 }
 
-
 ul#sizes{
   list-style:none;
   li{
@@ -428,6 +427,8 @@ html.photo_details {
   
   .credit_img { cursor:pointer; opacity: 0.9;}
   .credit_img:hover { opacity: 1;}
+  
+  .location-text { font-family : "AGaramondPro-Italic", serif; color : #999999;font-size:18px;}
   
   
   .select-style {padding: 0;width: 70%;border: 1px solid #ccc;border-radius: 2px;overflow: hidden;background-color: #fff;margin: 0 auto;background: #fff url(images/arrowdown.gif) no-repeat 90% 50%;}
