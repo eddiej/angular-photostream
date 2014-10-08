@@ -6,8 +6,8 @@ photosApp.run(function($rootScope, $templateCache) {
    });
 });
 
-photosApp.config(['$routeProvider',
-  function($routeProvider) {
+photosApp.config(['$routeProvider','$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/photographers', {
         templateUrl: 'partials/photographers.html',
@@ -32,7 +32,10 @@ photosApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/photos'
       });
-  }]);
+    $locationProvider.html5Mode(false);
+  }
+  
+  ]);
   
  
 

@@ -111,7 +111,8 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
 
     $scope.layout = UserService.get()
     $scope.username = $routeParams.username;
-    
+    $scope.price = 50;
+    $scope.thesize = 'small';
     
     
     $scope.$watch('layout', function(){
@@ -143,6 +144,7 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
     $scope.pad = pad
     
     $scope.photo = Photo.get({id: $routeParams.photoId, username: $routeParams.username}, function(data){   
+      $scope.photographer_location = data.location
       $scope.nonroom_css = {
         'transform': "scale("+get_nonroom_scale()+")",
         'padding-top': GALLERY_PADDING_TOP+'px',
@@ -157,25 +159,60 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
       }
       $scope.price_m = 45 + data.price_m
       
-     
-      if(data.original_image_width >= data.original_image_height){
-        w = 16
-        h = 16 * (data.original_image_height / data.original_image_width)
-        h = Math.round(h * 1) / 1
-      }else{
-        h = 16
-        w = 16 * (data.original_image_width / data.original_image_height)
-        w = Math.round(w * 1) / 1
+      $scope.image_css = {
+        'max-width': 'inherit'
+      }
+      
+      function set_dims(size){
+        if(data.original_image_width >= data.original_image_height){
+          w = size
+          h = size * (data.original_image_height / data.original_image_width)
+          h = Math.round(h * 1) / 1
+        }else{
+          h = size
+          w = size * (data.original_image_width / data.original_image_height)
+          w = Math.round(w * 1) / 1
+        }
+        $scope.photo_width = w
+        $scope.photo_height = h
       } 
       
-      $scope.photo_width = w
-      $scope.photo_height = h
+      set_dims(12)
       
       function get_nonroom_scale() {
         return $(window).height() / (( $('#nonroom').attr('data-topheight')*1) +  589)
       }
       function get_room_scale() {
         return $(window).height() / (( $('#theroom').attr('data-topheight')*1) +  589)
+      }
+      
+      $scope.changeSize = function(showsize) {
+        switch (showsize) {
+            case 's':
+                price = 50;
+                $scope.image_css = {'max-width': 'inherit', 'transform':"scale(1)"}
+                set_dims(12)
+                $scope.thesize = 'small'
+                break;
+            case 'm':
+                price = data['price_m'] + 45;
+                $scope.image_css = {'max-width': 'inherit', 'transform':"scale(1.2)"}
+                set_dims(16)
+                $scope.thesize = 'medium'
+                break;
+            case 'l':
+                price = data['price_l'] + 45;
+                $scope.image_css = {'max-width': 'inherit', 'transform':"scale(1.4)"}
+                set_dims(22)
+                $scope.thesize = 'large'
+                break;
+            case 'p':
+                price = data['price_p'] + 45;
+                set_dims(28)
+                $scope.thesize = 'premium'
+                break;
+        }
+        $scope.price = price;
       }
        
       

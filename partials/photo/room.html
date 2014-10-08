@@ -3,18 +3,24 @@ data-topheight='{{topheight}}'
 ng-style="room_css"
 >
   <div style='padding-top:{{pad}};padding-bottom:{{pad}}px'>
-    <img ng-src="{{photo.framed_mini.url}}" style='max-width:inherit;' 
+    <img ng-src="{{photo.framed_mini.url}}" 
       height='{{metre_pixel_scale * actual_height}}'
-      width='{{(metre_pixel_scale * actual_height) * (photo.width / photo.height)}}'> 
+      width='{{(metre_pixel_scale * actual_height) * (photo.width / photo.height)}}'
+      ng-style="image_css"> 
   </div>
 </div>
 
 
 <div id='puchase_flex'>
 <div id='puchase_options'> 
-  <p class="item-desc">Medium Framed Print</p>
-  <p class="price"><span class="currency">€</span>{{price_m}}</p>
+  <p class="item-desc">{{thesize}} Framed Print</p>
+  <p class="price"><span class="currency">€</span>{{price}}</p>
   <p class="frame-sizes gara-spaced"> {{photo_width}}" x {{photo_height}}" In.</p>
+  <ul id='sizes'>
+    <li ng-click="changeSize('s')" ng-class="{active: thesize == 'small'}">S</li>
+    <li ng-click="changeSize('m')" ng-class="{active: thesize == 'medium'}">M</li>
+    <li ng-click="changeSize('l')" ng-class="{active: thesize == 'large'}">L</li>
+  </ul>
   </div>
 </div>
 </div>
