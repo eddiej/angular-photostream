@@ -1,6 +1,8 @@
 $(document).ready(runscript)
 $(document).on('page:load', runscript)
 
+runscript
+
 function runscript() {
  reposition();
  $(window).on("throttledresize", reposition); 
