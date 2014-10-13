@@ -221,12 +221,12 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
   }
 ]);
 
-photosControllers.run(function($rootScope, $templateCache) {
-  $rootScope.$on('$viewContentLoaded', function() {
-    $templateCache.removeAll();
-    
-  });
-});
+// photosControllers.run(function($rootScope, $templateCache) {
+//   $rootScope.$on('$viewContentLoaded', function() {
+//     $templateCache.removeAll();
+//     
+//   });
+// });
 
 photosControllers.factory('UserService', function() {
   var cls='photo'
