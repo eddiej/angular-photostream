@@ -1,3 +1,5 @@
+
+
 var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices']);
 
 photosApp.run(function($rootScope, $templateCache) {
@@ -9,33 +11,29 @@ photosApp.run(function($rootScope, $templateCache) {
 photosApp.config(['$routeProvider','$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
-      when('/photographers', {
+      when('/index/photographers', {
         templateUrl: 'partials/photographers.html',
         controller: 'PhotographersListCtrl'
       }).
-      when('/photographers/:id', {
+      when('/:id', {
         templateUrl: 'partials/photographer.html',
         controller: 'PhotographersGalleryCtrl'
       }).
-      when('/photos', {
-        templateUrl: 'partials/photos.html',
-        controller: 'PhotoListCtrl'
-      }).
-      when('/photos/:photoId', {
-        templateUrl: 'partials/photo.html',
-        controller: 'PhotoDetailsCtrl'
-      }).
-      when('/photographers/:username/:photoId', {
+      when('/:username/:photoId', {
         templateUrl: 'partials/photo.html',
         controller: 'PhotogPhotoDetailsCtrl'
       }).
       otherwise({
-        redirectTo: '/photos'
+        redirectTo: '/eddie'
       });
     $locationProvider.html5Mode(false);
   }
-  
+
   ]);
+
+
+
+  
   
  
 

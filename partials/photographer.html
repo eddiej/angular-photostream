@@ -16,7 +16,7 @@
     <ul class="photo-grid">
       <li ng-repeat="p in photos"> 
       <div class="grid-con">
-        <a href="#/photographers/{{username}}/{{p.photo.id}}" class="project cc" style="background-image:url({{p.photo.image.display.url}});">
+        <a href="#/{{username}}/{{p.photo.id}}" class="project cc" style="background-image:url({{p.photo.image.display.url}});">
           <!--<h2>{{p.photo.title}}</h2>-->
         </a>
        <!-- <p>{{p.photo.description}}</p>-->
