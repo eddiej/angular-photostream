@@ -26,7 +26,7 @@ photosApp.config(['$routeProvider','$locationProvider',
       otherwise({
         redirectTo: '/eddie'
       });
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
   }
 
   ]);
