@@ -149,18 +149,43 @@ html.photo_details { /* The individual photo page*/
     .flexbox {
       margin:0 200px;text-align:center;
     }
+    
+    @media screen and (min-width: 320px) {
+  
+    .flexbox { margin: 0 20px;}
+  
+    }
+    
+    
+    @media screen and (min-width: 420px) {
+  
+    .flexbox { margin: 0 20px; }
+    
+  
+    }
+    
+      @media screen and (min-width: 640px) {
+  
+    .flexbox { margin: 0 200px;}
+  
+    }
+
+    
+    
+    
+    
   }
   .scrollableoverlay{position:absolute;top:0;left:0;height:auto;min-height:100%;}
   
 }
 
 ul#sizes{
-  list-style:none;
+  list-style:none; padding:0;
   li{
-    display:block;width:40px;height:40px;
+    background: #f2f2f2; width: 50px; height: 50px; display: block;line-height: 50px;float: left;padding-top: 0px; margin-top: 0px;font-size: 14px;text-align:center; font-family : 'proxima_novasemibold', Open Sans, Helvetica Neue, sans-serif; color: #999999;cursor: pointer; margin-right: 1px;font-size: 12px;
   }
   li.active{
-    background:red;
+    background: #333333; color: #fff;
   }
 }
 
@@ -455,6 +480,7 @@ html.photo_details {
   @media screen and (min-width: 420px) {
 
   #puchase_options { display:none; }
+  
 
   }
   
