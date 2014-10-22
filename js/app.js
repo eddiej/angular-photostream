@@ -11,6 +11,15 @@ photosApp.run(function($rootScope, $templateCache) {
 photosApp.config(['$routeProvider','$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
+      when('/', {
+        templateUrl: 'home.html'
+      }).
+      when('/about', {
+        templateUrl: 'about.html'
+      }).
+      when('/signup', {
+        templateUrl: 'signup.html'
+      }).
       when('/index/photographers', {
         templateUrl: 'partials/photographers.html',
         controller: 'PhotographersListCtrl'
@@ -24,7 +33,7 @@ photosApp.config(['$routeProvider','$locationProvider',
         controller: 'PhotogPhotoDetailsCtrl'
       }).
       otherwise({
-        redirectTo: '/eddie'
+        redirectTo: '/'
       });
     $locationProvider.html5Mode(true);
   }
