@@ -44,3 +44,5 @@ photographerServices.factory('Photographer', ['$resource',
     Photographer.setPage = function(p){page=p;};
     return Photographer;
   }]);
+  
+  

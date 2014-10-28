@@ -120,6 +120,15 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
       UserService.set($scope.layout)
     });
     
+    $scope.handleStripe = function(status, response){
+      if(response.error) {
+        alert('success')
+      } else {
+        // got stripe token, now charge it or smt
+        // token = response.id
+        alert('problem with card number')
+      }
+    }
     
     
     var METRE_PIXEL_SCALE = 1

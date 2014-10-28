@@ -1,12 +1,13 @@
 
 
-var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices']);
+var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices', 'angularPayments']);
 
 photosApp.run(function($rootScope, $templateCache) {
    $rootScope.$on('$viewContentLoaded', function() {
       $templateCache.removeAll();
    });
 });
+
 
 photosApp.config(['$routeProvider','$locationProvider',
   function($routeProvider, $locationProvider) {
@@ -35,7 +36,7 @@ photosApp.config(['$routeProvider','$locationProvider',
       otherwise({
         redirectTo: '/'
       });
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
   }
 
 ]);
