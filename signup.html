@@ -22,31 +22,52 @@
           <div class="card-form futura">
             <form class="signup">
               <input type="text" name="username" placeholder="Username"  ><br> </br>
-              <input type="text" name="email" placeholder="Email"><br></br>
-              
-              <h4 class="futura-light uppercase letter-spacing h4-white left-text">Credit Card Details</h4>
-              
-              <input type="text" name="Card Number" placeholder="Credit Card Number" ><br> </br>
-              <input class="mm" type="text" name="Month" placeholder="MM" >
-              <input class="yy" type="text" name="Year" placeholder="YY">
-              <input class="ccv" type="text" name="CCV" placeholder="CVC" >
-              <div class="clearfix"></div>
-              
-              <div class="card-total-wrap">
-              
-              <div class="card-total left-text">
-                  <h1 class=" futura-light letter-spacing h1-white">€60</h1>
-                  <h4 class="futura-light uppercase letter-spacing h4-white">Per year</h4>
-              </div>
-              <div class="card-submit-wrap">
-                <a href="#"  class="form-link uppercase futura-bold">Pay now</a>
-              </div>
-              <div class="clearfix"></div>
-              </div><!--end card-total-wrap-->
+              <input type="text" name="email" placeholder="Email"><br></br>              
             
             </form>
           
           </div>
+          
+      <form stripe-form="handleStripe" name="myForm" id="landing-signup" class="futura" >
+        <h4 class="futura-light uppercase letter-spacing h4-white left-text">Credit Card Details</h4>
+
+        <div class="card-number-signup-wrapper">
+          <label for="">Card Number</label> </br>
+         <input type="text" class="card-number-signup" ng-model="number" payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type" placeholder="Card Number"/> 
+        </div>
+  
+        <div class="expiry-signup-wrapper">
+        <label for="">Expiry</label>
+         <input type="text" class="expiry-signup" ng-model="expiry" payments-validate="expiry" payments-format="expiry" placeholder="MM YY" />
+        </div>
+        <div class="clearfix"></div>
+  
+  
+        <div class="name-signup-wrapper">
+         <label for="">Name </label>
+         <input type="text" class="card-name-signup" placeholder="Name on Card">
+        </div>
+  
+        <div class="cvc-signup-wrapper">
+         <label for="">CVC</label>
+         <input type="text" class="cvc-signup" ng-model="cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type"/>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <div class="card-total-wrap">
+          <div class="card-total left-text">
+              <h1 class=" futura-light letter-spacing h1-white">€60</h1>
+              <h4 class="futura-light uppercase letter-spacing h4-white">Per year</h4>
+          </div>
+    
+          <div class="signup-submit-wrapper">
+           <button type="submit" class="uppercase futura-bold">Pay now</button>
+          </div>
+        <div class="clearfix"></div>
+       </div> 
+      </form>
+
           
           
 

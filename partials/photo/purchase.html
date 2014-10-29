@@ -10,28 +10,30 @@
       
     <div class="clearfix"></div>
     
-    <form stripe-form="handleStripe" name="myForm">
-      <div class="span3">
-       <label for="">Card number</label>
-       <input type="text" class="input-block-level" ng-model="number" payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type"/>
+    <form stripe-form="handleStripe" name="myForm" id="photo-form" >
+      <div class="card-number-stripe-wrapper">
+        <label for="">Card Number</label> </br>
+       <input type="text" class="card-number-stripe" ng-model="number" payments-validate="card" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type" placeholder="Card Number"/> 
       </div>
 
-      <div class="span1">
-       <label for="">Expiry</label>
-       <input type="text" class="input-block-level" ng-model="expiry" payments-validate="expiry" payments-format="expiry" />
+      <div class="expiry-stripe-wrapper">
+      <label for="">Expiry</label>
+       <input type="text" class="expiry-stripe" ng-model="expiry" payments-validate="expiry" payments-format="expiry" />
       </div>
+      <div class="clearfix"></div>
 
-      <div class="span3">
+
+      <div class="name-stripe-wrapper">
        <label for="">Name on card </label>
-       <input type="text" class="input-block-level">
+       <input type="text" class="card-name-stripe" placeholder="Name on Card">
       </div>
 
-      <div class="span1">
+      <div class="cvc-stripe-wrapper">
        <label for="">CVC</label>
-       <input type="text" class="input-block-level" ng-model="cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type"/>
+       <input type="text" class="cvc-stripe" ng-model="cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type"/>
       </div>
 
-      <div class="span4">
+      <div>
        <button type="submit" class="btn btn-primary btn-large">Submit</button>
       </div>
       </form>
