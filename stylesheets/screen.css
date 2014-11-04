@@ -305,8 +305,8 @@ html.photo_details.room #puchase_flex #puchase_options {
 }
 
 /* line 229, ../sass/screen.scss */
-.ng-invalid {
-  color: red;
+form.signup input.ng-invalid {
+  color: red !important;
 }
 
 /* ==================================================================================================================================================== */

@@ -19,17 +19,18 @@
           <h4 class="futura-light uppercase letter-spacing h4-white">Get Rewards.</h4>
           <p class="futura-light main-white">- 1 year pre-paid subscription. </br>- Subscription begins v1 release, late Spring 2015. </br>- Locked-in rate of $5/month (regularly $9) </br> - Graphic Design & Marketing Pack worth $50.</br> </br> * Note - You will not be charged until you have started using the product. </p>
           </div><!--end cont-left-text-->
-          <div class="card-form futura">
-            <form class="signup">
-              <input type="text" name="username" placeholder="Username"  ><br> </br>
-              <input type="text" name="email" placeholder="Email"><br></br>
+          <div class="card-form futura">        
+              
+            <form stripe-form="handleStripe" class="signup">
+              <input type="text" name="username" placeholder="Username" ng-model="subForm.username" required><br> </br>
+              <input type="text" name="email" placeholder="Email" ng-model="subForm.email" required><br></br>
               
               <h4 class="futura-light uppercase letter-spacing h4-white left-text">Credit Card Details</h4>
-              
-              <input type="text" name="Card Number" placeholder="Credit Card Number" ><br> </br>
-              <input class="mm" type="text" name="Month" placeholder="MM" >
-              <input class="yy" type="text" name="Year" placeholder="YY">
-              <input class="ccv" type="text" name="CCV" placeholder="CVC" >
+              <input type="text" placeholder="Credit Card Number" class="input-block-level" ng-model="number" payments-format="card" ng-class="myForm.number.$card.type"/>
+              <br /> </br />
+              <input type="text" class="input-block-level" ng-model="expiry"  payments-format="expiry" placeholder='MM / YY'/>
+              <br /><br />
+              <input type="text" class="cvc" ng-model="cvc" payments-format="cvc" placeholder="CVC" />
               <div class="clearfix"></div>
               
               <div class="card-total-wrap">
@@ -39,7 +40,7 @@
                   <h4 class="futura-light uppercase letter-spacing h4-white">Per year</h4>
               </div>
               <div class="card-submit-wrap">
-                <a href="#"  class="form-link uppercase futura-bold">Pay now</a>
+                <button type="submit" class="form-link uppercase futura-bold" ng-click="myForm.submitTheForm()">Pay Now</button>
               </div>
               <div class="clearfix"></div>
               </div><!--end card-total-wrap-->

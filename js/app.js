@@ -1,6 +1,6 @@
 
 
-var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices', 'angularPayments']);
+var photosApp = angular.module("photosApp", ['ngAnimate', 'ngRoute', 'photosControllers', 'photoServices', 'locationServices', 'photographerServices', 'angularPayments', 'userServices']);
 
 photosApp.run(function($rootScope, $templateCache) {
    $rootScope.$on('$viewContentLoaded', function() {
@@ -19,7 +19,8 @@ photosApp.config(['$routeProvider','$locationProvider',
         templateUrl: 'about.html'
       }).
       when('/signup', {
-        templateUrl: 'signup.html'
+        templateUrl: 'signup.html',
+        controller: 'SignupCtrl'
       }).
       when('/index/photographers', {
         templateUrl: 'partials/photographers.html',

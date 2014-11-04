@@ -230,12 +230,32 @@ photosControllers.controller('PhotogPhotoDetailsCtrl', ['$scope', '$rootScope', 
   }
 ]);
 
-// photosControllers.run(function($rootScope, $templateCache) {
-//   $rootScope.$on('$viewContentLoaded', function() {
-//     $templateCache.removeAll();
-//     
-//   });
-// });
+photosControllers.run(function($rootScope, $templateCache) {
+  $rootScope.$on('$viewContentLoaded', function() {
+    $templateCache.removeAll();
+    
+  });
+});
+
+photosControllers.controller('SignupCtrl', ['$scope', '$rootScope', '$routeParams', 'Photographer', 'User',
+  function ($scope, $rootScope, $routeParams, Photographer, User){
+    $scope.subForm = {};
+    $scope.handleStripe = function(status, response){
+      
+      User.save({username: $scope.subForm.username, email: $scope.subForm.email}, function(data){
+        
+      });
+      
+      if(response.error) {
+        // alert(response.error.message)
+      } else {
+        // got stripe token, now charge it or smt
+        token = response.id
+        alert(token)
+      }
+    }
+  }
+]);
 
 photosControllers.factory('UserService', function() {
   var cls='photo'

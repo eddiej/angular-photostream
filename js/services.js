@@ -22,12 +22,23 @@ photoServices.factory('Photo', ['$resource',
 var locationServices = angular.module('locationServices', ['ngResource']);
 locationServices.factory('Location', ['$resource',
   function($resource){
-    var Location = $resource('http://www.lokofoto.com/api/locations/:id/states', {id: "@id"}, 
+    var Location = $resource('http://www.lokofoto.com/api/locations/:id/states', 
       {
         'states':    { method: 'GET', isArray: true },
       }
   );
   return Location;
+}]);
+
+var userServices = angular.module('userServices', ['ngResource']);
+userServices.factory('User', ['$resource',
+  function($resource){
+    var User = $resource('http://www.lokofoto.com/api/users', {},
+      {
+        'create':    { method: 'POST', isArray: false }, /* custom route, dont need actually just use save.*/
+      }
+  );
+  return User;
 }]);
 
 var photographerServices = angular.module('photographerServices', ['ngResource']);
