@@ -21,36 +21,14 @@
           </div><!--end cont-left-text-->
 
           <div class="card-form futura">        
-              
-            <form stripe-form="handleStripe" class="signup">
-              <input type="text" name="username" placeholder="Username" ng-model="subForm.username" required><br> </br>
-              <input type="text" name="email" placeholder="Email" ng-model="subForm.email" required><br></br>
-              
-              <h4 class="futura-light uppercase letter-spacing h4-white left-text">Credit Card Details</h4>
-              <input type="text" placeholder="Credit Card Number" class="input-block-level" ng-model="number" payments-format="card" ng-class="myForm.number.$card.type"/>
-              <br /> </br />
-              <input type="text" class="input-block-level" ng-model="expiry"  payments-format="expiry" placeholder='MM / YY'/>
-              <br /><br />
-              <input type="text" class="cvc" ng-model="cvc" payments-format="cvc" placeholder="CVC" />
-              <div class="clearfix"></div>
-              
-              <div class="card-total-wrap">
-              
-              <div class="card-total left-text">
-                  <h1 class=" futura-light letter-spacing h1-white">€60</h1>
-                  <h4 class="futura-light uppercase letter-spacing h4-white">Per year</h4>
-              </div>
-              <div class="card-submit-wrap">
-                <button type="submit" class="form-link uppercase futura-bold" ng-click="myForm.submitTheForm()">Pay Now</button>
-              </div>
-              <div class="clearfix"></div>
-              </div><!--end card-total-wrap-->
-
-            </form>
+           
           
           </div>
           
-      <form stripe-form="handleStripe" name="myForm" id="landing-signup" class="futura" >
+      <form stripe-form="handleStripe" name="myForm" id="landing-signup" class="futura" ng-submit="showwait()">
+        <input type="text" name="username" placeholder="Username" ng-model="subForm.username" required><br> </br>
+        <input type="text" name="email" placeholder="Email" ng-model="subForm.email" required><br></br>
+        
         <h4 class="futura-light uppercase letter-spacing h4-white left-text">Credit Card Details</h4>
 
         <div class="card-number-signup-wrapper">
@@ -83,10 +61,16 @@
               <h4 class="futura-light uppercase letter-spacing h4-white">Per year</h4>
           </div>
     
-          <div class="signup-submit-wrapper">
+          
+          <div class="signup-submit-wrapper">    
            <button type="submit" class="uppercase futura-bold">Pay now</button>
+           
           </div>
+          <div id='wait' style='border:1px solid grey; width:100px;float:right;margin-top:10px;display:none'>
+             Processing...
+           </div>
         <div class="clearfix"></div>
+        
        </div> 
       </form>
 

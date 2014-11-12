@@ -240,18 +240,26 @@ photosControllers.run(function($rootScope, $templateCache) {
 photosControllers.controller('SignupCtrl', ['$scope', '$rootScope', '$routeParams', 'Photographer', 'User',
   function ($scope, $rootScope, $routeParams, Photographer, User){
     $scope.subForm = {};
-    $scope.handleStripe = function(status, response){
+    $scope.showwait = function() {
+      $('#wait').show()
+    }
+    // User.save({username: 'eddiej', email: 'eddiej@gmail.com', token: 'abcdefg'}, function(data){
+      // alert(data.message)
+    // });
+    $scope.handleStripe = function(status, response){  
       
-      User.save({username: $scope.subForm.username, email: $scope.subForm.email}, function(data){
-        
-      });
       
       if(response.error) {
-        // alert(response.error.message)
+        $('#wait').hide()
+        alert("There was a problem with your card, please check the details and try again.")
       } else {
-        // got stripe token, now charge it or smt
+        // got stripe token, now create customer with it.
         token = response.id
-        alert(token)
+        User.save({username: $scope.subForm.username, email: $scope.subForm.email, token: token}, function(data){
+          $('#wait').hide()
+          alert(data.message)
+        });
+        
       }
     }
   }
