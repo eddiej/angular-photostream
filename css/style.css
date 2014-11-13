@@ -982,7 +982,7 @@ body {font-family:"brandon_grotesque_regularRg", "Open Sans", "Helvetica Neue", 
 .logo-cont { position: absolute; z-index: 5;width: 100%;padding-top: 20px;}
 .logo-cont img { left: 50%;text-align: center;}
 .logo-head { width: 100%; text-align: center;}
-.tag-cont { width: 100%; text-align: center; margin-top: 400px;}
+.tag-cont { width: 100%; text-align: center; padding-top: 400px; margin-bottom: 100px;}
 
 
 a.primary-link { padding: 20px 35px 20px 35px; border-radius: 3px; background: #ee3469; font-size: 12px; color: #fff; letter-spacing: 1.5px;}
@@ -1133,6 +1133,7 @@ a.form-link:hover { background:#e42b60; }
 
 .menu-logo { display: none; }
 .menu-btn { width: 100%; margin: 0 auto;text-align: center;float: left;padding-top: 10px;padding-right: 10px;}
+.tag-cont { padding-top: 300px; margin-bottom: 150px;}
 
 
 }
@@ -1154,6 +1155,7 @@ a.form-link:hover { background:#e42b60; }
   .project  { display: block; width: 100%; height: 300px;background-size:cover !important;float:left;position:relative;margin: 10px 0 10px 0;}
 
   .email_cont { width: 40%; margin: 0 auto;}
+  .tag-cont { padding-top: 300px;}
 
 
 }
@@ -1168,6 +1170,7 @@ a.form-link:hover { background:#e42b60; }
 	
 
 	.column {width:50%;float:left;}	
+	.tag-cont { padding-top: 400px;}
 	
   /* Intro */
 
@@ -1311,6 +1314,8 @@ a.form-link:hover { background:#e42b60; }
   .profile-img-bg { display: block; height: 400px; width: 400px;margin: 0 auto;}
   .profile-links { line-height: 400px;}
   .about-logo { padding-top: 30px; margin-bottom: -60px;}
+  
+  .tag-cont { padding-top: 400px;}
   
   /* Footer */
 
@@ -1608,6 +1613,14 @@ span.initial { font-family: Helvetica, sans-serif; font-weight: 800;color: #fff;
   opacity: 1;
 }
 
+
+.section2 { height: 100vh; }
+
+#section { background: url(../images/bg_app.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
 
 
 
