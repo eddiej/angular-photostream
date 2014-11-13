@@ -1078,7 +1078,7 @@ img.card-bg {
 .form-features { width: 80%; margin: 0 auto; text-align: left; }
 
 form.signup { width: 80%; margin: 0 auto; margin-top: 30px;}
-form.signup input { width: 100%; background: none; border: 1px solid #ccc; height: 50px; color: #ccc; padding-left: 10px;letter-spacing: 1.3px; font-size: 14px; }
+form.signup input { width: 100% ; background: none; border: 1px solid #ccc; height: 50px; color: #ccc; padding-left: 10px;letter-spacing: 1.3px; font-size: 14px; }
 form.signup input.mm { width: 25%; margin-right: 5%; float: left;}
 form.signup input.yy { width: 25%; margin-right: 20%; float: left; }
 form.signup input.ccv { width: 25%; float: left; }
