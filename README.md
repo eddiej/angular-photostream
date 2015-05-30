@@ -1,1 +1,3 @@
-Example angular application that uses the lokofoto API to display landscape photographs from around the world.
+# An Exercise in Angular
+
+This is an example angular application that consumes the Lokofoto API. Front-end at (http://eddiej.github.io/angular-photostream).
