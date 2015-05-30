@@ -4,7 +4,7 @@ photoServices.factory('Photo', ['$resource',
     var country = 'Ireland';
     var state = '';
     var page = 1;
-    var Photo = $resource('http://192.168.1.6:3000/api/photos/:id', {id: "@id"}, 
+    var Photo = $resource('http://www.lokofoto.com/api/photos/:id', {id: "@id"}, 
       {
         'index':   { method: 'GET', isArray: true },
         'show':    { method: 'GET', isArray: false },
@@ -22,7 +22,7 @@ photoServices.factory('Photo', ['$resource',
 var locationServices = angular.module('locationServices', ['ngResource']);
 locationServices.factory('Location', ['$resource',
   function($resource){
-    var Location = $resource('http://192.168.1.6:3000/api/locations/:id/states', {id: "@id"}, 
+    var Location = $resource('http://www.lokofoto.com/api/locations/:id/states', {id: "@id"}, 
       {
         'states':    { method: 'GET', isArray: true },
       }
@@ -33,7 +33,7 @@ locationServices.factory('Location', ['$resource',
 var photographerServices = angular.module('photographerServices', ['ngResource']);
 photographerServices.factory('Photographer', ['$resource',
   function($resource){
-    var Photographer = $resource('http://192.168.1.6:3000/api/photographers/:id', {id: "@id"}, 
+    var Photographer = $resource('http://www.lokofoto.com/api/photographers/:id', {id: "@id"}, 
       {
         'index':   { method: 'GET', isArray: true },
         'show':    { method: 'GET', isArray: true },
